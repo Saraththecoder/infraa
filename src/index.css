@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Design System Colors */
+  --color-ak-navy: #0A2E5C;
+  --color-ak-navy-deep: #071A35;
+  --color-ak-gold: #D97706;
+  --color-ak-gold-light: #F59E0B;
+  --color-ak-offwhite: #F8FAFC;
+  --color-ak-slate: #1E293B;
+  --color-ak-muted: #64748B;
+  --color-ak-border: rgba(10, 46, 92, 0.10);
+
+  /* Shadows */
+  --shadow-ak-sm: 0 2px 8px rgba(7, 26, 53, 0.08);
+  --shadow-ak-md: 0 8px 32px rgba(7, 26, 53, 0.12);
+  --shadow-ak-lg: 0 20px 60px rgba(7, 26, 53, 0.18);
+
+  /* Fonts */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Legacy fallbacks to avoid compilation breakage */
+  --color-primary: #0A2E5C;
+  --color-secondary: #D97706;
+  --color-accent-orange: #D97706;
+  --color-light-orange: #F59E0B;
+  --color-dark-blue: #071A35;
+  --color-off-white: #F8FAFC;
+  --color-text-dark: #1E293B;
+  --color-text-gray: #64748B;
+  --color-border-custom: rgba(10, 46, 92, 0.10);
+}
+
+/* Custom Scrollbar to match corporate style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0A2E5C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  color: #1E293B;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Typography Resets and Overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  color: #0A2E5C;
+}
+
+/* Fluid Typography Utilities using clamp() */
+.text-hero {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 6vw, 96px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.text-display {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 4vw, 64px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.text-heading {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.text-subhead {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.text-body-custom {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.text-caption-custom {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-ui {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Layout Utilities */
+.container-custom {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 80px);
+}
+
+.section-pad {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-pad-sm {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* DOT GRID CTA TEXTURE */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* PREMIUM NAV LINKS */
+.nav-link-custom {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link-custom:hover, .nav-link-custom.active-link {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D97706;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link-custom:hover::after, .nav-link-custom.active-link::after {
+  width: 100%;
+}
+
+/* SERVICE CARD ANIMATIONS */
+.service-card-title {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.service-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D97706;
+  transition: width 0.3s ease;
+}
+.service-card:hover .service-card-title::after {
+  width: 40px;
+}
+
+

@@ -1,0 +1,2748 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>AK Group | Premium Real Estate Developer</title>
+    <meta name="title" content="AK Group | Premium Real Estate Developer" />
+    <meta name="description" content="AK Group delivers landmark residential and commercial developments across India. Explore our portfolio of premium plotted ventures, villas, and infrastructure solutions." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AK Group | Premium Real Estate Developer" />
+    <meta property="og:description" content="AK Group delivers landmark residential and commercial developments across India. Explore our portfolio." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&auto=format&fit=crop" />
+
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS Design System -->
+    <style>
+      /* --- DESIGN SYSTEM TOKENS --- */
+      :root {
+        --void: #FFFFFF;           /* Base light background */
+        --slate: #071A35;          /* Deep navy surface (80% color theme) */
+        --stone: #0A2E5C;          /* Primary Blue accents */
+        --ivory: #F8FAFC;          /* Warm off-white backgrounds */
+        --gold: #D97706;           /* Accent Orange (5% color theme) */
+        --gold-light: #F59E0B;     /* Light Orange for hovers */
+        --white: #FFFFFF;
+        --text-dark: #1E293B;      /* Charcoal text for readability */
+        --text-gray: #64748B;      /* Gray text for secondary copy */
+        --border-custom: rgba(15, 23, 42, 0.08);
+        
+        --font-display: 'Cormorant Garamond', Georgia, serif;
+        --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+        --font-mono: 'DM Mono', 'Courier New', monospace;
+      }
+
+      /* --- COLOR UTILITY CLASSES --- */
+      .text-white { color: var(--white) !important; }
+      .text-stone { color: var(--stone) !important; }
+      .text-gold { color: var(--gold) !important; }
+      .text-slate { color: var(--slate) !important; }
+
+      /* --- CUSTOM CURSOR --- */
+      #custom-cursor {
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--gold);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+        pointer-events: none;
+        z-index: 10000;
+        mix-blend-mode: difference;
+        transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, transform 0.08s cubic-bezier(0.25, 1, 0.5, 1);
+        display: none;
+      }
+      
+      @media (pointer: fine) {
+        #custom-cursor {
+          display: block;
+        }
+        body, a, button, input, select, textarea, .timeline-step, .project-card, .service-card {
+          cursor: none !important;
+        }
+      }
+
+      #custom-cursor.expanding {
+        width: 32px;
+        height: 32px;
+        background-color: rgba(217, 119, 6, 0.25);
+        border-color: var(--gold-light);
+      }
+
+      /* --- GLOBAL STYLES --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--white);
+        color: var(--text-dark);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-family: inherit;
+        transition: all 0.25s ease;
+      }
+
+      /* --- TYPOGRAPHY SCALE --- */
+      .t-display {
+        font-family: var(--font-display);
+        font-weight: 300;
+        font-size: 80px;
+        line-height: 1.0;
+        letter-spacing: -2px;
+      }
+
+      .t-h2 {
+        font-family: var(--font-display);
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+      }
+
+      .t-h3 {
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .t-body {
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .t-caption {
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .t-stat {
+        font-family: var(--font-mono);
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 1.0;
+        color: var(--gold);
+      }
+
+      /* --- LAYOUT UTILITIES --- */
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-left: 48px;
+        padding-right: 48px;
+        position: relative;
+        z-index: 1;
+      }
+
+      section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+        position: relative;
+      }
+
+      /* --- TOPOGRAPHIC BACKGROUND LAYERS --- */
+      @keyframes topoDrift {
+        0% { background-position: 50% 10%; }
+        50% { background-position: 55% 20%; }
+        100% { background-position: 50% 10%; }
+      }
+
+      .topo-bg-dark {
+        position: relative;
+        background-color: var(--slate);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 600' width='100%25' height='100%25'%3E%3Cpath d='M-100,100 C200,120 400,80 600,110 C800,140 1000,90 1200,105 C1400,120 1500,110 1600,110' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,160 C150,140 350,180 580,150 C810,120 1020,170 1230,145 C1440,120 1520,150 1600,150' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,220 C220,240 420,200 620,230 C820,260 990,210 1190,225 C1390,240 1480,230 1600,230' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,280 C180,260 380,300 610,270 C840,240 1050,290 1260,265 C1470,240 1550,270 1600,270' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,340 C240,360 440,320 640,350 C840,380 1020,330 1220,345 C1420,360 1500,350 1600,350' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,400 C200,380 400,420 630,390 C860,360 1080,410 1290,385 C1500,360 1580,390 1600,390' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,460 C260,480 460,440 660,470 C860,500 1050,450 1250,465 C1450,480 1520,470 1600,470' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3Cpath d='M-100,520 C220,500 420,540 650,510 C880,480 1100,530 1310,505 C1520,480 1600,510 1650,510' fill='none' stroke='rgba(245,240,232,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+        background-size: 130% 130%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        animation: topoDrift 28s ease-in-out infinite;
+      }
+
+      .topo-bg-light {
+        position: relative;
+        background-color: var(--white);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 600' width='100%25' height='100%25'%3E%3Cpath d='M-100,100 C200,120 400,80 600,110 C800,140 1000,90 1200,105 C1400,120 1500,110 1600,110' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,160 C150,140 350,180 580,150 C810,120 1020,170 1230,145 C1440,120 1520,150 1600,150' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,220 C220,240 420,200 620,230 C820,260 990,210 1190,225 C1390,240 1480,230 1600,230' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,280 C180,260 380,300 610,270 C840,240 1050,290 1260,265 C1470,240 1550,270 1600,270' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,340 C240,360 440,320 640,350 C840,380 1020,330 1220,345 C1420,360 1500,350 1600,350' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,400 C200,380 400,420 630,390 C860,360 1080,410 1290,385 C1500,360 1580,390 1600,390' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,460 C260,480 460,440 660,470 C860,500 1050,450 1250,465 C1450,480 1520,470 1600,470' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3Cpath d='M-100,520 C220,500 420,540 650,510 C880,480 1100,530 1310,505 C1520,480 1600,510 1650,510' fill='none' stroke='rgba(10,46,92,0.04)' stroke-width='1'/%3E%3C/svg%3E");
+        background-size: 130% 130%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        animation: topoDrift 34s ease-in-out infinite;
+      }
+      
+      .topo-bg-dark *, .topo-bg-light * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* --- STICKY NAVIGATION --- */
+      nav.nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 72px;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 100;
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+      }
+
+  nav.nav-bar.scycled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-custom);
+  }
+
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .logo-brand {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+  }
+
+  nav.nav-bar.scycled .logo-brand {
+    color: var(--stone);
+  }
+
+  .logo-brand::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--gold);
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-menu a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+  }
+
+  nav.nav-bar.scycled .nav-menu a {
+    color: var(--text-gray);
+  }
+
+  .nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    color: var(--gold);
+  }
+
+  nav.nav-bar.scycled .nav-menu a:hover {
+    color: var(--stone);
+  }
+
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+
+  .btn-consultation {
+    border: 1px solid var(--white);
+    padding: 10px 24px;
+    background: transparent;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+  }
+
+  nav.nav-bar.scycled .btn-consultation {
+    border-color: var(--gold);
+    background-color: var(--gold);
+    color: var(--white);
+  }
+
+  nav.nav-bar.scycled .btn-consultation:hover {
+    background-color: var(--gold-light);
+    border-color: var(--gold-light);
+    color: var(--white);
+  }
+
+  .btn-consultation:hover {
+    background-color: var(--white);
+    color: var(--stone);
+  }
+
+  .nav-hamburger {
+    display: none;
+    font-size: 24px;
+    color: var(--white);
+    transition: color 0.3s ease;
+  }
+
+  nav.nav-bar.scycled .nav-hamburger {
+    color: var(--stone);
+  }
+
+  .nav-drawer {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: var(--slate);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 20px;
+    z-index: 99;
+    transform: translateY(-150%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  nav.nav-bar.scycled .nav-drawer {
+    background-color: var(--white);
+    border-bottom-color: var(--border-custom);
+  }
+
+  .nav-drawer.open {
+    transform: translateY(0);
+  }
+
+  .nav-drawer a {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    padding: 8px 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.3s ease;
+  }
+
+  nav.nav-bar.scycled .nav-drawer a {
+    color: var(--text-dark);
+    border-bottom-color: var(--border-custom);
+  }
+
+  nav.nav-bar.scycled .nav-drawer a:hover {
+    color: var(--gold);
+  }
+
+  /* --- SECTION 1: HERO --- */
+  #hero {
+    min-height: 100vh;
+    background-color: var(--slate);
+    display: flex;
+    align-items: center;
+    padding-top: 108px;
+    padding-bottom: 72px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 16px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .hero-title-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .hero-title-group h1 {
+    margin: 0;
+  }
+
+  .hero-title-group h1.accent {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 56px;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background-color: var(--gold);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--gold-light);
+    letter-spacing: 0.12em;
+  }
+
+  .btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background-color: rgba(217, 119, 6, 0.05);
+  }
+
+  .hero-micro-stats {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    width: 100%;
+  }
+
+  .micro-stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .micro-stat-val {
+    font-family: var(--font-mono);
+    font-size: 32px;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .hero-micro-stats .t-caption {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .micro-stat-sep {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-img-box {
+    aspect-ratio: 4/5;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-img-box::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  @keyframes kenBurnsZoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+  .hero-slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-slideshow .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .hero-slideshow .slide.active {
+    opacity: 1;
+    animation: kenBurnsZoom 24s ease-in-out infinite;
+  }
+
+  /* Floating Project Card with Premium Glassmorphism */
+  .floating-project-card {
+    position: absolute;
+    bottom: 32px;
+    left: -32px;
+    background: rgba(7, 26, 53, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 3px solid var(--gold);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px 32px;
+    max-width: 320px;
+    z-index: 5;
+    text-align: left;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .floating-project-card:hover {
+    transform: translateY(-4px);
+    background: rgba(7, 26, 53, 0.9);
+  }
+
+  #slide-title, #slide-location {
+    transition: opacity 0.3s ease;
+  }
+
+  .floating-project-card .p-title {
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  /* Scroll Indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    animation: pulseIndicator 2s infinite ease-in-out;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* --- SECTION 2: ABOUT / WHY AK GROUP --- */
+  #about {
+    background-color: var(--ivory);
+    color: var(--text-dark);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 96px;
+    align-items: start;
+  }
+
+  .about-sticky-side {
+    position: sticky;
+    top: 120px;
+    text-align: left;
+  }
+
+  .about-sticky-side .t-h2 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    color: var(--stone);
+  }
+
+  .about-line {
+    width: 64px;
+    height: 1.5px;
+    background-color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .about-sticky-side .about-p {
+    color: var(--text-gray);
+    max-width: 420px;
+  }
+
+  .differentiator-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diff-row {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 32px 24px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    transition: background-color 0.2s ease;
+  }
+
+  .diff-row:first-child {
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+  }
+
+  .diff-row:hover {
+    background-color: rgba(10, 46, 92, 0.03);
+  }
+
+  .diff-row:hover .diff-num {
+    color: var(--stone);
+  }
+
+  .diff-num {
+    color: var(--gold);
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+  }
+
+  .diff-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--stone);
+    margin-bottom: 12px;
+  }
+
+  .diff-desc {
+    color: var(--text-gray);
+    font-size: 15px;
+  }
+
+  /* --- SECTION 3: FEATURED DEVELOPMENTS --- */
+  #projects {
+    background-color: var(--white);
+  }
+
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    text-align: left;
+  }
+
+  .projects-header-left h2 {
+    margin-top: 8px;
+    color: var(--stone);
+  }
+
+  .projects-view-all {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    color: var(--text-gray);
+  }
+
+  .projects-view-all:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background-color: var(--border-custom);
+  }
+
+  /* Asymmetric Layout styles */
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .project-card.hero-card {
+    grid-column: span 2;
+    height: 642px;
+  }
+
+  /* Inner drawing borders on hover */
+  .project-card::before, .project-card::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1px solid transparent;
+    transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+    z-index: 6;
+    pointer-events: none;
+  }
+
+  .project-card::before {
+    top: 24px;
+    left: 24px;
+  }
+
+  .project-card::after {
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .project-card:hover::before {
+    width: calc(100% - 48px);
+    height: calc(100% - 48px);
+    border-top-color: var(--gold);
+    border-right-color: var(--gold);
+  }
+
+  .project-card:hover::after {
+    width: calc(100% - 48px);
+    height: calc(100% - 48px);
+    border-bottom-color: var(--gold);
+    border-left-color: var(--gold);
+  }
+
+  .project-img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .project-img-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+  }
+
+  .project-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(7, 26, 53, 0.95) 100%);
+  }
+
+  .project-info {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-status-pill {
+    width: fit-content;
+    background-color: rgba(217, 119, 6, 0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 4px 10px;
+    border-radius: 0;
+  }
+
+  .project-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* --- SECTION 4: STATS BAND --- */
+  #stats-band {
+    background-color: var(--slate);
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    position: relative;
+  }
+
+  .stat-item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-item:last-child::after {
+    display: none;
+  }
+
+  .stat-label {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* --- SECTION 5: SERVICES --- */
+  #services {
+    background-color: var(--ivory);
+    color: var(--text-dark);
+  }
+
+  .services-header {
+    text-align: left;
+    margin-bottom: 64px;
+  }
+
+  .services-header h2 {
+    margin-top: 8px;
+    white-space: pre-line;
+    color: var(--stone);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .service-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-custom);
+    padding: 40px 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+
+  .service-card::before, .service-card::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1.5px solid transparent;
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    z-index: 10;
+  }
+
+  .service-card::before {
+    top: -1.5px;
+    left: -1.5px;
+  }
+
+  .service-card::after {
+    bottom: -1.5px;
+    right: -1.5px;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(10, 46, 92, 0.06);
+  }
+
+  .service-card:hover::before {
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    border-top-color: var(--gold);
+    border-right-color: var(--gold);
+  }
+
+  .service-card:hover::after {
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    border-bottom-color: var(--gold);
+    border-left-color: var(--gold);
+  }
+
+  .service-card:hover .service-title {
+    color: var(--gold);
+  }
+
+  .service-icon {
+    color: var(--stone);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    color: var(--gold);
+  }
+
+  .service-title {
+    color: var(--stone);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+  }
+
+  .service-desc {
+    color: var(--text-gray);
+    font-size: 15px;
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+
+  .service-more {
+    display: inline-block;
+    color: var(--text-gray);
+  }
+
+  .service-card:hover .service-more {
+    color: var(--gold);
+  }
+
+  /* --- SECTION 6: PROCESS --- */
+  #process {
+    background-color: var(--white);
+    color: var(--text-dark);
+  }
+
+  .process-header {
+    text-align: left;
+    margin-bottom: 80px;
+  }
+
+  .process-header h2 {
+    margin-top: 8px;
+    color: var(--stone);
+  }
+
+  .timeline-container {
+    position: relative;
+    margin-top: 80px;
+    height: 420px;
+  }
+
+  /* Horizontal line centered vertically */
+  .timeline-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(10, 46, 92, 0.05) 0%, rgba(10, 46, 92, 0.2) 20%, var(--gold) 50%, rgba(10, 46, 92, 0.2) 80%, rgba(10, 46, 92, 0.05) 100%);
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-step {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Diamond-shaped node (rotated square with zero border radius) */
+  .timeline-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    border: 3px solid var(--stone);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 3;
+  }
+
+  .timeline-step:hover .timeline-node {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+    background-color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .step-content {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Odd steps content placed above the line */
+  .timeline-step:nth-child(odd) .step-content {
+    bottom: calc(50% + 28px);
+  }
+
+  /* Even steps content placed below the line */
+  .timeline-step:nth-child(even) .step-content {
+    top: calc(50% + 28px);
+  }
+
+  .timeline-step:nth-child(odd):hover .step-content {
+    transform: translateY(-6px);
+  }
+
+  .timeline-step:nth-child(even):hover .step-content {
+    transform: translateY(6px);
+  }
+
+  .step-num {
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .step-title {
+    color: var(--stone);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+
+  .timeline-step:hover .step-title {
+    color: var(--gold);
+  }
+
+  .step-desc {
+    color: var(--text-gray);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 200px;
+  }
+
+  /* --- SECTION 7: TESTIMONIALS --- */
+  #testimonials {
+    background-color: var(--ivory);
+    color: var(--text-dark);
+  }
+
+  .testimonials-header {
+    text-align: left;
+    margin-bottom: 64px;
+  }
+
+  .testimonials-header h2 {
+    margin-top: 8px;
+    color: var(--stone);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .testimonial-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-custom);
+    padding: 40px 32px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    box-shadow: 0 4px 20px rgba(10, 46, 92, 0.02);
+  }
+
+  .quote-mark {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 80px;
+    line-height: 1.0;
+    font-family: var(--font-display);
+    color: rgba(10, 46, 92, 0.05);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 32px;
+  }
+
+  .testimonial-client {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .client-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--stone);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .client-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .client-name {
+    font-weight: 550;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+
+  .client-property {
+    color: var(--text-gray);
+  }
+
+  /* --- SECTION 8: CORE VALUES --- */
+  #values {
+    background-color: var(--slate);
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .values-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .values-header h2 {
+    margin-top: 8px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+
+  .value-item {
+    padding: 40px;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .value-title {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .value-desc {
+    color: var(--gold);
+  }
+
+  /* --- SECTION 9: CONTACT / GET IN TOUCH --- */
+  #contact {
+    background-color: var(--slate);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 4.5fr 5.5fr;
+    gap: 96px;
+    align-items: start;
+  }
+
+  .contact-info-panel {
+    text-align: left;
+  }
+
+  .contact-info-panel h2 {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    white-space: pre-line;
+    color: var(--white);
+  }
+
+  .contact-info-desc {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+  }
+
+  .contact-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-line-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--ivory);
+  }
+
+  .contact-line-icon {
+    color: var(--gold);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+  }
+
+  .contact-form-panel {
+    text-align: left;
+  }
+
+  .enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .form-field-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field-group label {
+    margin-bottom: 8px;
+  }
+
+  .enquiry-form input,
+  .enquiry-form select,
+  .enquiry-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 12px 0;
+    width: 100%;
+    transition: border-color 0.2s ease;
+  }
+
+  .enquiry-form input:focus,
+  .enquiry-form select:focus,
+  .enquiry-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--gold);
+  }
+
+  .enquiry-form select {
+    color: rgba(255, 255, 255, 0.85);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .enquiry-form select option {
+    background-color: var(--slate);
+    color: var(--white);
+  }
+
+  .enquiry-form textarea {
+    resize: none;
+  }
+
+  .btn-submit {
+    background-color: var(--gold);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 16px;
+    text-align: center;
+    border: none;
+    width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .btn-submit:hover {
+    background-color: var(--gold-light);
+  }
+
+  .form-privacy-note {
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: -16px;
+  }
+
+  .success-message-box {
+    padding: 16px;
+    border: 1px solid var(--gold);
+    text-align: center;
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Map block */
+  .map-wrapper {
+    margin-top: 80px;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(1) invert(0.9) contrast(1.2);
+    opacity: 0.85;
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    background-color: #050E1A; /* Darker navy for footer */
+    padding: 64px 48px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    gap: 64px;
+    text-align: left;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .footer-tagline {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.25s ease;
+  }
+
+  .social-circle:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background-color: rgba(217, 119, 6, 0.1);
+  }
+
+  .footer-col h4 {
+    margin-bottom: 24px;
+    color: var(--gold);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+  }
+
+  .footer-links a,
+  .footer-address {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .footer-links a:hover {
+    color: var(--gold);
+  }
+
+  .footer-address {
+    line-height: 1.6;
+    font-style: normal;
+  }
+
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* --- ANIMATION REVEALS --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger children animation helper classes */
+  .stagger-parent > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .stagger-parent.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-parent.visible > *:nth-child(1) { transition-delay: 0.1s; }
+  .stagger-parent.visible > *:nth-child(2) { transition-delay: 0.2s; }
+  .stagger-parent.visible > *:nth-child(3) { transition-delay: 0.3s; }
+  .stagger-parent.visible > *:nth-child(4) { transition-delay: 0.4s; }
+  .stagger-parent.visible > *:nth-child(5) { transition-delay: 0.5s; }
+  .stagger-parent.visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+  /* Keyframe animations */
+  @keyframes pulseIndicator {
+    0%, 100% {
+      transform: translate(-50%, 0);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translate(-50%, 8px);
+      opacity: 0.9;
+    }
+  }
+
+  /* --- PREFERS REDUCED MOTION --- */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-delay: 0s !important;
+      animation-duration: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0s !important;
+      scroll-behavior: auto !important;
+    }
+    
+    .reveal, .stagger-parent > * {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    .scroll-indicator {
+      animation: none !important;
+    }
+  }
+
+  /* --- RESPONSIVE MOBILE MEDIA QUERIES --- */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    section {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    /* Nav */
+    .nav-menu,
+    .btn-consultation {
+      display: none;
+    }
+
+    .nav-hamburger {
+      display: block;
+    }
+
+    /* Hero */
+    #hero {
+      min-height: auto;
+      padding-top: 100px;
+      padding-bottom: 48px;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .t-display {
+      font-size: 52px;
+    }
+
+    .hero-desc {
+      margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-img-box {
+      aspect-ratio: 3/2;
+    }
+
+    .floating-project-card {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-top: -32px;
+      margin-left: 16px;
+      margin-right: 16px;
+      max-width: calc(100% - 32px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+
+    /* About */
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-sticky-side {
+      position: relative;
+      top: 0;
+    }
+
+    /* Projects Showcase */
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      background-color: transparent;
+    }
+
+    .project-card,
+    .project-card.hero-card {
+      grid-column: span 1;
+      height: 300px;
+    }
+
+    .projects-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    /* Stats Band */
+    #stats-band {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 16px;
+    }
+
+    .stat-item::after {
+      display: none;
+    }
+
+    /* Services */
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-card {
+      height: auto;
+      min-height: 240px;
+    }
+
+    /* Process Timeline */
+    .timeline-container {
+      height: auto;
+      margin-top: 48px;
+    }
+
+    .timeline-track {
+      left: 16px;
+      right: auto;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+      transform: none;
+      background: linear-gradient(180deg, var(--gold) 0%, rgba(10, 46, 92, 0.1) 100%);
+    }
+
+    .timeline-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      height: auto;
+      padding-left: 0;
+    }
+
+    .timeline-step {
+      height: auto;
+      flex-direction: row;
+      align-items: flex-start;
+      padding-left: 48px;
+      text-align: left;
+    }
+
+    .timeline-node {
+      left: 16px;
+      top: 10px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .timeline-step:hover .timeline-node {
+      transform: translate(-50%, -50%) rotate(45deg) scale(1.3);
+    }
+
+    .step-content {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto !important;
+      bottom: auto !important;
+      text-align: left;
+      align-items: flex-start;
+      transform: none !important;
+    }
+
+    .step-desc {
+      max-width: 100%;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    /* Core Values */
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .value-item {
+      padding: 32px 0;
+    }
+
+    /* Contact */
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    /* Footer */
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- CUSTOM CURSOR FOLLOWER -->
+<div id="custom-cursor"></div>
+
+<!-- STICKY NAVIGATION BAR -->
+<nav id="nav-bar" class="nav-bar">
+  <div class="nav-container">
+    <a href="#home" class="logo-brand">AK GROUP</a>
+    
+    <ul class="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+    <button class="btn-consultation" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      Book Consultation
+    </button>
+    
+    <button id="nav-toggle" class="nav-hamburger" aria-label="Toggle Navigation">☰</button>
+  </div>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div id="nav-drawer" class="nav-drawer">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- SECTION 1: HERO SECTION -->
+<section id="home" class="topo-bg-dark">
+  <div class="container hero-grid">
+    <!-- Hero Left Column -->
+    <div class="hero-content reveal">
+      <span class="hero-eyebrow t-caption">EST. 2018 — PREMIUM REAL ESTATE DEVELOPER</span>
+      
+      <div class="hero-title-group">
+        <h1 class="t-display text-white">Designing</h1>
+        <h1 class="t-display accent">Landmarks.</h1>
+        <h1 class="t-display text-white" style="font-size: 60px; line-height: 1.1; margin-top: 12px;">Building Trust.</h1>
+      </div>
+      
+      <p class="hero-desc t-body">
+        AK Group develops landmark residential and commercial projects across India. We engineer high-yield investment options and deliver uncompromising quality to our buyers.
+      </p>
+      
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+          Explore Projects
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+          Our Story
+        </button>
+      </div>
+      
+      <div class="hero-micro-stats">
+        <div class="micro-stat-item">
+          <span class="micro-stat-val">5+</span>
+          <span class="t-caption">Years</span>
+        </div>
+        <div class="micro-stat-sep"></div>
+        <div class="micro-stat-item">
+          <span class="micro-stat-val">100+</span>
+          <span class="t-caption">Projects</span>
+        </div>
+        <div class="micro-stat-sep"></div>
+        <div class="micro-stat-item">
+          <span class="micro-stat-val">20+</span>
+          <span class="t-caption">Cities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Right Column -->
+    <div class="hero-image-wrap reveal">
+      <div class="hero-img-box">
+        <div class="hero-slideshow" id="hero-slideshow">
+          <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop');" data-title="Napa Valley Premium Villas" data-location="Bengaluru, Karnataka"></div>
+          <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop');" data-title="Sierra Heights Clubhouse" data-location="Hyderabad, Telangana"></div>
+          <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop');" data-title="Highway Hills Commercial" data-location="Chennai, Tamil Nadu"></div>
+        </div>
+      </div>
+      
+      <!-- Floating card overlay -->
+      <div class="floating-project-card" id="floating-project-card">
+        <div class="t-caption" style="color: var(--gold); font-weight: 500; letter-spacing: 0.1em;">Featured Development</div>
+        <div class="t-h3 p-title text-white" id="slide-title">Napa Valley Premium Villas</div>
+        <div class="t-caption" id="slide-location" style="color: rgba(255,255,255,0.6)">Bengaluru, Karnataka</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Scroll Indicator -->
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down to About Section">
+    <span class="t-caption" style="font-size: 9px; letter-spacing: 0.2em">Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </a>
+</section>
+
+<!-- SECTION 2: ABOUT / WHY AK GROUP -->
+<section id="about" class="topo-bg-light">
+  <div class="container about-grid">
+    <!-- Sticky Left Header -->
+    <div class="about-sticky-side reveal">
+      <span class="t-caption text-stone">About</span>
+      <h2 class="t-h2">Why serious investors choose AK Group.</h2>
+      <div class="about-line"></div>
+      <p class="about-p t-body">
+        Over the years, AK Group has set new benchmarks in real estate development, delivering transparent transactions and uncompromising engineering quality to our clients.
+      </p>
+    </div>
+
+    <!-- Vertical differentiator list -->
+    <div class="differentiator-list stagger-parent">
+      <div class="diff-row">
+        <span class="diff-num t-caption">01</span>
+        <h3 class="diff-title">Architectural Integrity</h3>
+        <p class="diff-desc">
+          Every AK Group property is designed by award-winning architects with zero compromise on material quality or structural precision.
+        </p>
+      </div>
+      
+      <div class="diff-row">
+        <span class="diff-num t-caption">02</span>
+        <h3 class="diff-title">Land-First Approach</h3>
+        <p class="diff-desc">
+          We acquire strategic land parcels before designing, ensuring our developments are always in tomorrow's premium locations.
+        </p>
+      </div>
+      
+      <div class="diff-row">
+        <span class="diff-num t-caption">03</span>
+        <h3 class="diff-title">Transparent Investment Model</h3>
+        <p class="diff-desc">
+          Full financial visibility from day one. No hidden escalations, no surprises — just a clear, documented path to possession.
+        </p>
+      </div>
+      
+      <div class="diff-row">
+        <span class="diff-num t-caption">04</span>
+        <h3 class="diff-title">Post-Possession Partnership</h3>
+        <p class="diff-desc">
+          Our relationship with buyers doesn't end at handover. AK Group provides 5-year structural warranties and a dedicated care team.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: FEATURED DEVELOPMENTS (PORTFOLIO GRID) -->
+<section id="projects">
+  <div class="container">
+    <!-- Header row -->
+    <div class="projects-header reveal">
+      <div class="projects-header-left">
+        <span class="t-caption text-stone">Portfolio</span>
+        <h2 class="t-h2 text-stone">Featured Developments</h2>
+      </div>
+      <a href="#contact" class="projects-view-all t-caption">View All Projects →</a>
+    </div>
+
+    <!-- Irregular Asymmetric Seamed Grid -->
+    <div class="projects-grid stagger-parent">
+      
+      <!-- Card 1 - Napa Valley Premium Villas (Hero Card, Row 1, Spans 2 Cols) -->
+      <div class="project-card hero-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop" 
+            alt="Napa Valley Premium Villas property in Bengaluru" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption">Completed</span>
+            <h3 class="t-h3 text-white">Napa Valley Premium Villas</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Bengaluru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 - Sierra Heights Clubhouse (Standard Card, Row 1) -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop" 
+            alt="Sierra Heights Clubhouse property in Hyderabad" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption">Ongoing</span>
+            <h3 class="t-h3 text-white" style="font-size: 22px;">Sierra Heights Clubhouse</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Hyderabad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 - Highway Hills Commercial (Standard Card, Row 2) -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop" 
+            alt="Highway Hills Commercial towers in Chennai" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption">Completed</span>
+            <h3 class="t-h3 text-white" style="font-size: 22px;">Highway Hills Commercial</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Chennai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 - Marble Gate Loft Suites (Hero Card, Row 2, Spans 2 Cols) -->
+      <div class="project-card hero-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop" 
+            alt="Marble Gate Loft Suites modern layout in Mumbai" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption">Ongoing</span>
+            <h3 class="t-h3 text-white">Marble Gate Loft Suites</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Mumbai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 - Napa Valley Premium Plus (Hero Card, Row 3, Spans 2 Cols) -->
+      <div class="project-card hero-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop" 
+            alt="Napa Valley Premium Plus upcoming residential plots in Pune" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption" style="background-color:rgba(217,119,6,0.1); border-color: rgba(255,255,255,0.3); color: var(--gold-light)">Upcoming</span>
+            <h3 class="t-h3 text-white">Napa Valley Premium Plus</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Pune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 - Capitol Ridge Villas (Standard Card, Row 3) -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img 
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&auto=format&fit=crop" 
+            alt="Capitol Ridge Villas properties in Delhi NCR" 
+          />
+          <div class="project-gradient"></div>
+          <div class="project-info">
+            <span class="project-status-pill t-caption">Completed</span>
+            <h3 class="t-h3 text-white" style="font-size: 22px;">Capitol Ridge Villas</h3>
+            <div class="project-details">
+              <span class="t-caption text-stone" style="color: var(--white); font-weight: 500;">Delhi NCR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: STATISTICS BAND -->
+<section id="stats-band" class="topo-bg-dark">
+  <div class="container">
+    <div class="stats-grid stagger-parent">
+      
+      <div class="stat-item">
+        <span class="t-stat stat-number" data-target="5">+</span>
+        <span class="stat-label t-caption">Years of Excellence</span>
+      </div>
+      
+      <div class="stat-item">
+        <span class="t-stat stat-number" data-target="100">+</span>
+        <span class="stat-label t-caption">Projects Delivered</span>
+      </div>
+      
+      <div class="stat-item">
+        <span class="t-stat stat-number" data-target="20">+</span>
+        <span class="stat-label t-caption">Cities Presence</span>
+      </div>
+      
+      <div class="stat-item">
+        <span class="t-stat stat-number" data-target="100">%</span>
+        <span class="stat-label t-caption">Client Satisfaction</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SERVICES (REAL ESTATE SOLUTIONS) -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="t-caption text-stone">What We Build</span>
+      <h2 class="t-h2 text-stone">Real Estate Solutions<br>Designed for Growth</h2>
+    </div>
+
+    <div class="services-grid stagger-parent">
+      
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Residential -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">Residential Development</h3>
+          <p class="service-desc">From plots to premium gated communities, we deliver homes built to last generations.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Commercial -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+              <line x1="9" y1="22" x2="9" y2="16"></line>
+              <line x1="15" y1="22" x2="15" y2="16"></line>
+              <line x1="9" y1="16" x2="15" y2="16"></line>
+              <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Commercial Complexes</h3>
+          <p class="service-desc">Grade-A office parks and retail destinations that attract marquee tenants from day one.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Consulting -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Project-Level Consulting</h3>
+          <p class="service-desc">Expert guidance on land acquisition, statutory approvals, and development feasibility analysis.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Construction -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+              <line x1="15" y1="3" x2="15" y2="21"></line>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="3" y1="15" x2="21" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Construction Management</h3>
+          <p class="service-desc">End-to-end site execution with zero tolerance for project schedule or quality deviation.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Property Management -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Property Management</h3>
+          <p class="service-desc">Post-handover asset management that protects and grows the long-term value of your investment.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div>
+          <div class="service-icon">
+            <!-- SVG Icon for Investment -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Investment Advisory</h3>
+          <p class="service-desc">Data-driven real estate investment strategies tailored specifically for HNI and institutional clients.</p>
+        </div>
+        <a href="#contact" class="service-more t-caption">Learn More →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="t-caption text-stone">How We Work</span>
+      <h2 class="t-h2 text-stone">Our Development Process</h2>
+    </div>
+
+    <div class="timeline-container reveal">
+      <!-- Horizontal Line Track (relative back layer) -->
+      <div class="timeline-track"></div>
+      
+      <div class="timeline-grid">
+        
+        <!-- Step 1 -->
+        <div class="timeline-step">
+          <div class="step-content">
+            <span class="step-num t-caption">01</span>
+            <h3 class="step-title">Site Acquisition</h3>
+            <p class="step-desc">We identify and acquire land in high-growth corridors using proprietary market intelligence.</p>
+          </div>
+          <div class="timeline-node"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="step-content">
+            <span class="step-num t-caption">02</span>
+            <h3 class="step-title">Design & Approvals</h3>
+            <p class="step-desc">Award-winning architects develop master plans while our legal team secures clearances in parallel.</p>
+          </div>
+          <div class="timeline-node"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="step-content">
+            <span class="step-num t-caption">03</span>
+            <h3 class="step-title">Construction</h3>
+            <p class="step-desc">Our in-house construction teams execute with zero compromise on timeline or finish quality.</p>
+          </div>
+          <div class="timeline-node"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="step-content">
+            <span class="step-num t-caption">04</span>
+            <h3 class="step-title">Quality Assurance</h3>
+            <p class="step-desc">Independent structural audits at every milestone ensure properties exceed IS code standards.</p>
+          </div>
+          <div class="timeline-node"></div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step">
+          <div class="step-content">
+            <span class="step-num t-caption">05</span>
+            <h3 class="step-title">Handover</h3>
+            <p class="step-desc">A white-glove possession process: documentation, snag resolution, and move-in coordinates.</p>
+          </div>
+          <div class="timeline-node"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <span class="t-caption text-stone">What Clients Say</span>
+      <h2 class="t-h2 text-stone">Trusted by Discerning Buyers</h2>
+    </div>
+
+    <div class="testimonials-grid stagger-parent">
+      
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <span class="quote-mark">❝</span>
+        <blockquote class="testimonial-text">
+          "AK Group delivered our home six months ahead of schedule. The quality of marble and woodwork exceeded what we saw in the showroom — a level of integrity you rarely find today."
+        </blockquote>
+        <div class="testimonial-client">
+          <div class="client-avatar t-caption">RM</div>
+          <div class="client-meta">
+            <span class="client-name">Rajesh M.</span>
+            <span class="client-property t-caption">Owner, Sierra Heights Unit 4B</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <span class="quote-mark">❝</span>
+        <blockquote class="testimonial-text">
+          "As an NRI investor, I needed complete transparency on every rupee. AK Group's monthly reporting portal and single point of contact made it feel like I was there on-site every week."
+        </blockquote>
+        <div class="testimonial-client">
+          <div class="client-avatar t-caption">SA</div>
+          <div class="client-meta">
+            <span class="client-name">Sunita A.</span>
+            <span class="client-property t-caption">Investor, Capitol Ridge Villa 12</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <span class="quote-mark">❝</span>
+        <blockquote class="testimonial-text">
+          "We've bought three AK Group commercial units across two cities. Each time, the rental yield has outperformed the market by over 18%. That consistency is remarkable."
+        </blockquote>
+        <div class="testimonial-client">
+          <div class="client-avatar t-caption">DV</div>
+          <div class="client-meta">
+            <span class="client-name">Deepak V.</span>
+            <span class="client-property t-caption">Portfolio Investor, Highway Hills Tower B</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: CORE VALUES -->
+<section id="values">
+  <div class="container">
+    <div class="values-header reveal">
+      <span class="t-caption text-gold" style="font-weight: 500;">Our Ethos</span>
+      <h2 class="t-h2" style="color: var(--white)">What We Stand For</h2>
+    </div>
+
+    <div class="values-grid stagger-parent">
+      
+      <div class="value-item">
+        <h3 class="value-title font-serif">Trust</h3>
+        <span class="value-desc t-caption">"We do what we say we will do."</span>
+      </div>
+
+      <div class="value-item">
+        <h3 class="value-title font-serif">Precision</h3>
+        <span class="value-desc t-caption">"Details that owners notice for decades."</span>
+      </div>
+
+      <div class="value-item">
+        <h3 class="value-title font-serif">Transparency</h3>
+        <span class="value-desc t-caption">"No fine print. No surprises."</span>
+      </div>
+
+      <div class="value-item">
+        <h3 class="value-title font-serif">Innovation</h3>
+        <span class="value-desc t-caption">"Smarter spaces for modern life."</span>
+      </div>
+
+      <div class="value-item">
+        <h3 class="value-title font-serif">Sustainability</h3>
+        <span class="value-desc t-caption">"Built to last, built to care."</span>
+      </div>
+
+      <div class="value-item">
+        <h3 class="value-title font-serif">Community</h3>
+        <span class="value-desc t-caption">"Developments that strengthen neighbourhoods."</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: CONTACT / GET IN TOUCH -->
+<section id="contact" class="topo-bg-dark">
+  <div class="container contact-grid">
+    <!-- Contact Left Info -->
+    <div class="contact-info-panel reveal">
+      <span class="t-caption text-gold" style="font-weight: 500;">Let's Talk</span>
+      <h2 class="t-h2 text-white">Ready to Build<br>Something<br>Remarkable?</h2>
+      <p class="contact-info-desc t-body">
+        Our team responds within 4 business hours. For urgent project enquiries, call us directly.
+      </p>
+      
+      <div class="contact-lines">
+        <div class="contact-line-item">
+          <span class="contact-line-icon">📍</span>
+          <span class="t-body">AK Tower, 4th Floor, MG Road, Bengaluru 560001</span>
+        </div>
+        
+        <div class="contact-line-item">
+          <span class="contact-line-icon">📞</span>
+          <span class="t-body"><a href="tel:+918045678900" class="hover:text-gold">+91 80 4567 8900</a></span>
+        </div>
+        
+        <div class="contact-line-item">
+          <span class="contact-line-icon">✉️</span>
+          <span class="t-body"><a href="mailto:enquiries@akgroup.in" class="hover:text-gold">enquiries@akgroup.in</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Right Form -->
+    <div class="contact-form-panel reveal">
+      <div id="form-container">
+        <form id="enquiry-form" class="enquiry-form">
+          
+          <div class="form-field-group">
+            <label for="full-name" class="t-caption text-gold" style="font-weight: 500;">Full Name *</label>
+            <input 
+              type="text" 
+              id="full-name" 
+              name="fullname" 
+              required 
+              placeholder="Enter name"
+            />
+          </div>
+
+          <div class="form-field-group">
+            <label for="phone-number" class="t-caption text-gold" style="font-weight: 500;">Phone Number *</label>
+            <input 
+              type="tel" 
+              id="phone-number" 
+              name="phone" 
+              required 
+              placeholder="Enter phone"
+            />
+          </div>
+
+          <div class="form-field-group">
+            <label for="project-interest" class="t-caption text-gold" style="font-weight: 500;">Project Interest</label>
+            <select id="project-interest" name="interest">
+              <option value="Residential">Residential</option>
+              <option value="Commercial">Commercial</option>
+              <option value="Investment">Investment</option>
+              <option value="Consulting">Consulting</option>
+            </select>
+          </div>
+
+          <div class="form-field-group">
+            <label for="message" class="t-caption text-gold" style="font-weight: 500;">Message</label>
+            <textarea 
+              id="message" 
+              name="msg" 
+              rows="4" 
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="btn-submit" class="btn-submit">
+            Book Your Consultation
+          </button>
+          
+          <span class="form-privacy-note t-caption">
+            By submitting, you agree to our privacy policy. No spam, ever.
+          </span>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Embedded Iframe Map -->
+  <div class="container reveal">
+    <div class="map-wrapper">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9736854199994!2d77.6166564!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9f1165ec91a7%3A0xb3ff76c4ec23528b!2sMG%20Road%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1717999999999!5m2!1sen!2sin" 
+        title="AK Group MG Road Office Location Map"
+        allowfullscreen="" 
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    
+    <!-- Col 1: Brand details & Socials -->
+    <div class="footer-col">
+      <a href="#home" class="footer-logo">AK GROUP</a>
+      <p class="footer-tagline">Building Tomorrow's Addresses Today.</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/" target="_blank" class="social-circle" aria-label="LinkedIn Profile">IN</a>
+        <a href="https://instagram.com/" target="_blank" class="social-circle" aria-label="Instagram Profile">IG</a>
+        <a href="https://twitter.com/" target="_blank" class="social-circle" aria-label="Twitter Profile">TW</a>
+      </div>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div class="footer-col">
+      <h4 class="t-caption">Company</h4>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Projects list links -->
+    <div class="footer-col">
+      <h4 class="t-caption">Projects</h4>
+      <ul class="footer-links">
+        <li><a href="#projects">Napa Valley Villas</a></li>
+        <li><a href="#projects">Sierra Heights</a></li>
+        <li><a href="#projects">Highway Hills</a></li>
+        <li><a href="#projects">Marble Gate Suites</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Contacts details -->
+    <div class="footer-col">
+      <h4 class="t-caption">Contact</h4>
+      <address class="footer-address">
+        AK Tower, 4th Floor,<br>
+        MG Road, Bengaluru 560001<br>
+        <span style="display:block; margin-top:8px">Tel: +91 80 4567 8900</span>
+        <span>Email: enquiries@akgroup.in</span>
+      </address>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom bar -->
+  <div class="footer-bottom">
+    <span>© 2024 AK Group Pvt Ltd. All rights reserved.</span>
+    <span>Privacy Policy · Terms · RERA: KARNAT/12345/2024</span>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT: CONTROLLER LOGIC -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    // 1. Navigation Sticky scroll triggers
+    const navBar = document.getElementById("nav-bar");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        navBar.classList.add("scycled");
+      } else {
+        navBar.classList.remove("scycled");
+      }
+    });
+
+    // 2. Navigation Mobile Hamburger Toggle
+    const toggleBtn = document.getElementById("nav-toggle");
+    const drawer = document.getElementById("nav-drawer");
+    
+    toggleBtn.addEventListener("click", function () {
+      drawer.classList.toggle("open");
+      if (toggleBtn.textContent === "☰") {
+        toggleBtn.textContent = "✕";
+      } else {
+        toggleBtn.textContent = "☰";
+      }
+    });
+
+    // Close drawer on link click
+    drawer.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function () {
+        drawer.classList.remove("open");
+        toggleBtn.textContent = "☰";
+      });
+    });
+
+    // 3. Scroll Reveal Animations with IntersectionObserver
+    const revealElements = document.querySelectorAll(".reveal, .stagger-parent");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // 4. Statistics counter animation
+    const statsSection = document.getElementById("stats-band");
+    const statElements = document.querySelectorAll(".stat-number");
+    let statsAnimated = false;
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          animateStats();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    function animateStats() {
+      const duration = 1800; // ms
+      
+      statElements.forEach(el => {
+        const targetValStr = el.getAttribute("data-target");
+        const targetVal = parseInt(targetValStr, 10);
+        const suffix = el.textContent.trim(); // gets '+' or '%'
+        
+        let startTimestamp = null;
+        
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          // Easing out quadratic
+          const easeOutProgress = progress * (2 - progress);
+          
+          const currentVal = Math.floor(easeOutProgress * targetVal);
+          el.textContent = currentVal + suffix;
+          
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            el.textContent = targetValStr + suffix;
+          }
+        }
+        
+        window.requestAnimationFrame(step);
+      });
+    }
+
+    // 5. Contact Form Submission prevention & thank-you display
+    const enquiryForm = document.getElementById("enquiry-form");
+    const formContainer = document.getElementById("form-container");
+
+    if (enquiryForm) {
+      enquiryForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Replaces form contents with inline thank you message
+        const successBox = document.createElement("div");
+        successBox.className = "success-message-box reveal visible";
+        successBox.innerHTML = `
+          <p style="font-size: 16px; margin-bottom: 8px;">Inquiry Received</p>
+          <p style="color: var(--gold); font-family: var(--font-body); text-transform: none;">
+            Thank you. We'll be in touch within 4 hours.
+          </p>
+        `;
+        
+        formContainer.innerHTML = '';
+        formContainer.appendChild(successBox);
+      });
+    }
+
+    // 6. Custom Cursor follower tracking logic
+    const cursor = document.getElementById("custom-cursor");
+    if (cursor) {
+      document.addEventListener("mousemove", function (e) {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      const hoverElements = document.querySelectorAll("a, button, input, select, textarea, .timeline-step, .project-card, .service-card");
+      hoverElements.forEach(el => {
+        el.addEventListener("mouseenter", function () {
+          cursor.classList.add("expanding");
+        });
+        el.addEventListener("mouseleave", function () {
+          cursor.classList.remove("expanding");
+        });
+      });
+    }
+
+    // 7. Hero Slideshow cyclic rotation logic
+    const heroSlideshow = document.getElementById("hero-slideshow");
+    if (heroSlideshow) {
+      const slides = heroSlideshow.querySelectorAll(".slide");
+      const slideTitle = document.getElementById("slide-title");
+      const slideLocation = document.getElementById("slide-location");
+      let currentSlideIdx = 0;
+
+      setInterval(function () {
+        slides[currentSlideIdx].classList.remove("active");
+        currentSlideIdx = (currentSlideIdx + 1) % slides.length;
+        
+        const nextSlide = slides[currentSlideIdx];
+        nextSlide.classList.add("active");
+
+        if (slideTitle && slideLocation) {
+          slideTitle.style.opacity = 0;
+          slideLocation.style.opacity = 0;
+          
+          setTimeout(() => {
+            slideTitle.textContent = nextSlide.getAttribute("data-title");
+            slideLocation.textContent = nextSlide.getAttribute("data-location");
+            slideTitle.style.opacity = 1;
+            slideLocation.style.opacity = 1;
+          }, 300); // smooth fade transition for texts
+        }
+      }, 7000);
+    }
+
+  });
+</script>
+
+</body>
+</html>
