@@ -29,7 +29,7 @@ export default function Loader() {
             }}
             className="flex flex-col items-center"
           >
-            <div className="relative flex items-center justify-center w-24 h-24 mb-6 rounded-2xl bg-slate-900 border border-white/5 shadow-2xl shadow-[rgba(10,46,92,0.2)] p-3">
+            <div className="relative flex items-center justify-center w-24 h-24 mb-6 rounded-2xl bg-slate-900 border border-white/5 shadow-2xl shadow-[rgba(15,23,42,0.2)] p-3">
               <img
                 src="/logo.png"
                 alt="AK Group Logo"

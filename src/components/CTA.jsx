@@ -7,7 +7,7 @@ export default function CTA() {
     <section 
       className="py-[120px] relative overflow-hidden text-center"
       style={{
-        backgroundColor: "#0A2E5C",
+        backgroundColor: "#0F172A",
         backgroundImage: "radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
         backgroundSize: "32px 32px"
       }}
@@ -22,17 +22,17 @@ export default function CTA() {
         >
           {/* Eyebrow Label */}
           <div className="text-ak-gold text-[13px] font-sans font-medium tracking-[0.15em] uppercase">
-            — Ready to Invest?
+            — Start Your Project
           </div>
 
           {/* Heading */}
           <h2 className="text-display text-white font-serif font-bold mt-4 leading-tight max-w-2xl">
-            Your Next Investment Starts Here.
+            Ready to Build Your Dream Home?
           </h2>
           
           {/* Subheading */}
           <p className="mt-4 text-subhead text-white/65 max-w-xl font-light">
-            Let's find the right land, at the right location, with full documentation.
+            Meet our interior design architects for a free consultation and personalized 3D plan.
           </p>
 
           {/* Buttons row */}
@@ -41,7 +41,7 @@ export default function CTA() {
             {/* Call Now button */}
             <a
               href="tel:+919948100096"
-              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-ak-gold hover:bg-ak-gold-light text-white font-sans text-xs font-bold tracking-widest uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md w-full sm:w-auto text-center"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-ak-gold hover:bg-ak-gold-light text-[#0F172A] font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm hover:shadow-ak-md w-full sm:w-auto text-center"
             >
               <FaPhoneAlt size={12} />
               <span>Call Now</span>
@@ -52,7 +52,7 @@ export default function CTA() {
               href="https://wa.me/919948100096"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/20 hover:border-ak-gold text-white font-sans text-xs font-bold tracking-widest uppercase rounded-[2px] transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/20 hover:border-ak-gold text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
             >
               <FaWhatsapp size={14} />
               <span>WhatsApp Us</span>

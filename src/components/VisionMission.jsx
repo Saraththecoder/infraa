@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { FiEye, FiTarget, FiCheck } from "react-icons/fi";
 
 const missionPoints = [
-  "Deliver quality developments that stand the test of time.",
-  "Maintain complete operational transparency in all transactions.",
-  "Ensure highest levels of customer satisfaction and support.",
-  "Embrace engineering innovation and modern design concepts.",
-  "Build sustainable communities with premium infrastructure assets."
+  "Deliver factory-finished modular furniture matching European quality audits.",
+  "Provide absolute itemized price quotes with zero hidden modifications.",
+  "Adhere strictly to our 45-day handover promise from design sign-off.",
+  "Embrace spatial interior design innovations and virtual 3D planning.",
+  "Offer reliable lifetime utility backed by a flat 12-year warranty."
 ];
 
 export default function VisionMission() {
@@ -37,7 +37,7 @@ export default function VisionMission() {
               </h3>
 
               <p className="text-ak-navy font-serif text-lg md:text-xl leading-relaxed font-light italic">
-                "To become a trusted and respected real estate and infrastructure development company by creating high-quality developments that enhance communities and generate long-term value."
+                "To become Hyderabad's most trusted premium interior design studio by delivering creative spatial layouts, durable modular craftsmanship, and absolute timeline punctuality."
               </p>
             </div>
 

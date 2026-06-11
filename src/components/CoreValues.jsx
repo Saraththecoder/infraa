@@ -5,32 +5,32 @@ import { FiBriefcase, FiCheckCircle, FiAward, FiEye, FiZap, FiSmile } from "reac
 const values = [
   {
     title: "Trust",
-    description: "We build enduring relationships founded on the bedrock of transparency, reliability, and honest business deals.",
+    description: "We build enduring relationships founded on the bedrock of transparency, reliability, and honest design execution.",
     icon: <FiBriefcase size={24} />
   },
   {
     title: "Integrity",
-    description: "Compliance with all regulations and walking the talk is our standard. Legal and ethical correctness is non-negotiable.",
+    description: "We promise fully itemized, transparent quotes with zero hidden charges, adhering strictly to our 45-day move-in guarantee.",
     icon: <FiCheckCircle size={24} />
   },
   {
     title: "Quality",
-    description: "From layout planning to execution of roads and amenities, we insist on uncompromising quality and premium standards.",
+    description: "From 3D spatial planning to modular fabrication and on-site assembly, we insist on uncompromising finish standards.",
     icon: <FiAward size={24} />
   },
   {
     title: "Transparency",
-    description: "Every registration, agreement, and title check is open to scrutiny, with no hidden fees or obfuscated processes.",
+    description: "Every material choice, cabinet board thickness, and hardware brand is open to scrutiny and delivered exactly as agreed.",
     icon: <FiEye size={24} />
   },
   {
     title: "Innovation",
-    description: "Integrating smart infrastructure layouts, environmental practices, and advanced project monitoring solutions.",
+    description: "Integrating smart space-saving modular fittings, sliding wardrobe technologies, and virtual reality walk-throughs.",
     icon: <FiZap size={24} />
   },
   {
     title: "Customer Satisfaction",
-    description: "We place buyers at the heart of our operations, supporting them at every step of purchase, documentation, and beyond.",
+    description: "We place homeowners at the heart of our operations, supporting them at every step of design planning, handover, and beyond.",
     icon: <FiSmile size={24} />
   }
 ];
@@ -71,7 +71,7 @@ export default function CoreValues() {
           </h2>
           
           <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-xl mx-auto">
-            Our guiding principles define how we work, make decisions, and interact with stakeholders every single day.
+            Our guiding principles define how we design, manufacture, and deliver your dream home interiors every single day.
           </p>
         </div>
 

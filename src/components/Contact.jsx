@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", interest: "Plotted Ventures", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", interest: "Full Home Interiors", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Contact() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      setFormData({ name: "", email: "", phone: "", interest: "Plotted Ventures", message: "" });
+      setFormData({ name: "", email: "", phone: "", interest: "Full Home Interiors", message: "" });
       
       setTimeout(() => setSubmitSuccess(false), 5000);
     }, 1200);
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
           
           <h2 className="text-heading text-ak-navy font-serif font-bold mt-4 leading-[1.25]">
-            Begin Your Property Journey
+            Get Your Customized Quote
           </h2>
         </div>
 
@@ -55,7 +55,7 @@ export default function Contact() {
                 Let's Start a Conversation
               </h3>
               <p className="text-ak-muted font-sans text-body-custom max-w-md leading-relaxed">
-                Reach out to our executive desk to learn about legal property clearance mutations, site aggregator valuations, or layout pre-launches.
+                Reach out to our design desk to request a free site measurement, look through material board samples, or book a consultation at our studio.
               </p>
             </div>
 
@@ -196,10 +196,10 @@ export default function Contact() {
                       backgroundPosition: "right 16px center"
                     }}
                   >
-                    <option value="Plotted Ventures">Plotted Ventures</option>
-                    <option value="Villa Development">Villa Development</option>
-                    <option value="Consulting">Consulting Solutions</option>
-                    <option value="Infrastructure Projects">Infrastructure Projects</option>
+                    <option value="Full Home Interiors">Full Home Interiors</option>
+                    <option value="Modular Kitchen">Modular Kitchen</option>
+                    <option value="Custom Wardrobes">Custom Wardrobes</option>
+                    <option value="Turnkey Renovations">Turnkey Renovations</option>
                     <option value="Others">Others</option>
                   </select>
                 </div>

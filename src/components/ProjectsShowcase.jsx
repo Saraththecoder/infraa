@@ -1,66 +1,72 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMapPin, FiArrowRight } from "react-icons/fi";
 
 const categories = [
   { id: "all", name: "All" },
-  { id: "ongoing", name: "Ongoing" },
-  { id: "completed", name: "Completed" },
-  { id: "upcoming", name: "Upcoming" },
+  { id: "kitchen", name: "Kitchen" },
+  { id: "living", name: "Living Room" },
+  { id: "wardrobes", name: "Wardrobe" },
 ];
 
 const projects = [
   {
-    name: "Sagar Enclave Extension",
+    name: "Minimalist L-Shape Kitchen",
     location: "LB Nagar, Hyderabad",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-    description: "Elite residential developments featuring modular layout blueprints, BT roads, and modern municipal connections."
+    category: "kitchen",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+    description: "Sleek European styled L-shaped modular kitchen featuring matte laminates, G-profile handles, and quartz countertop."
   },
   {
-    name: "Green Meadows Venture",
-    location: "Kothur, Hyderabad Sector",
-    status: "Ready to Register",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop",
-    description: "Premium DTCP approved open plot layout. Fully developed with electricity, storm water channels, and plantation zones."
+    name: "Contemporary Living Lounge",
+    location: "Jubilee Hills, Hyderabad",
+    status: "Premium Delivery",
+    category: "living",
+    image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=800&auto=format&fit=crop",
+    description: "Elegant TV panel backdrop with marble textures, custom warm-light LED profile strips, and minimal storage units."
   },
   {
-    name: "Highway Hub Commercial",
-    location: "Sagar Highway, Hyderabad",
-    status: "Ongoing",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop",
-    description: "High commercial-density layout perfect for retail showrooms, warehouse logistics, and corporate structures."
-  },
-  {
-    name: "Reddy Colony Infrastructure",
-    location: "Near Sagar Enclave, Hyderabad",
+    name: "Master Suite Sliding Closet",
+    location: "Gachibowli, Hyderabad",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop",
-    description: "Complete layout excavation, underground sewer system installation, and municipal drinking water supply line piping execution."
+    category: "wardrobes",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop",
+    description: "Floor-to-ceiling 3-door sliding wardrobe with premium tinted glass facades and automatic internal sensor LED profiles."
   },
   {
-    name: "Sagar Valley Premium",
-    location: "Reddy Colony, Hyderabad",
-    status: "Pre-Launch",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",
-    description: "An upcoming gated plotted venture. Designed with modern park landscaping, concrete curbs, and security perimeter fencing."
+    name: "Lacquered PU Parallel Kitchen",
+    location: "Miyapur, Hyderabad",
+    status: "Completed",
+    category: "kitchen",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop",
+    description: "Parallel kitchen layout styled in dual-tone PU paint finish with soft-close tandem drawers and built-in microwave slots."
   },
   {
-    name: "Capital Ridge Villas",
-    location: "Adibatla Corridor, Hyderabad",
-    status: "Planning Phase",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop",
-    description: "Architectural blueprint phase of premium luxury smart villas, emphasizing green materials, and solar grids."
+    name: "Bespoke Glass Swing Wardrobe",
+    location: "Financial District, Hyderabad",
+    status: "Completed",
+    category: "wardrobes",
+    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
+    description: "Swing door wardrobe with metallic bronze frames, glass panels, and dedicated internal drawers for jewelry organizers."
+  },
+  {
+    name: "Luxury Penthouse Living Room",
+    location: "Kukatpally, Hyderabad",
+    status: "Completed",
+    category: "living",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop",
+    description: "High-ceiling living lounge featuring custom wooden slatted partitions, gypsum false ceiling cove lighting, and stone panelling."
   }
 ];
 
 const projectHeights = {
-  "Sagar Enclave Extension": true,      // Tall
-  "Green Meadows Venture": false,       // Short
-  "Highway Hub Commercial": false,      // Short
-  "Reddy Colony Infrastructure": true,  // Tall
-  "Sagar Valley Premium": true,         // Tall
-  "Capital Ridge Villas": false,        // Short
+  "Minimalist L-Shape Kitchen": true,
+  "Contemporary Living Lounge": false,
+  "Master Suite Sliding Closet": false,
+  "Lacquered PU Parallel Kitchen": true,
+  "Bespoke Glass Swing Wardrobe": true,
+  "Luxury Penthouse Living Room": false,
 };
 
 export default function ProjectsShowcase() {
@@ -68,12 +74,7 @@ export default function ProjectsShowcase() {
 
   const filteredProjects = activeTab === "all"
     ? projects
-    : projects.filter((p) => {
-        if (activeTab === "ongoing") return p.status === "Ongoing";
-        if (activeTab === "completed") return p.status === "Completed" || p.status === "Ready to Register";
-        if (activeTab === "upcoming") return p.status === "Pre-Launch" || p.status === "Planning Phase";
-        return true;
-      });
+    : projects.filter((p) => p.category === activeTab);
 
   // Split projects based on original index to maintain column stability when tabs are clicked
   const leftColumnProjects = projects
@@ -93,7 +94,7 @@ export default function ProjectsShowcase() {
         exit={{ opacity: 0, scale: 0.98 }}
         transition={{ duration: 0.4 }}
         key={project.name}
-        className={`group relative overflow-hidden rounded-[4px] shadow-ak-sm hover:shadow-ak-lg cursor-pointer bg-ak-offwhite w-full ${
+        className={`group relative overflow-hidden rounded-none shadow-ak-sm hover:shadow-ak-lg cursor-pointer bg-ak-offwhite w-full ${
           isTall ? "h-[420px] md:h-[520px]" : "h-[280px] md:h-[320px]"
         }`}
       >
@@ -109,15 +110,15 @@ export default function ProjectsShowcase() {
         <div 
           className="absolute inset-0 transition-opacity duration-300"
           style={{
-            background: "linear-gradient(to top, rgba(7, 26, 53, 0.95) 0%, rgba(7, 26, 53, 0.3) 60%, transparent 100%)"
+            background: "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.35) 60%, transparent 100%)"
           }}
         />
         
         {/* Bottom Overlay Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-left">
           
-          {/* Status Badge - Gold backdrop, 2px border radius, uppercase letter spacing 0.15em */}
-          <div className="w-fit bg-[#D97706] text-white text-[10px] font-sans font-medium tracking-[0.15em] uppercase px-3 py-1 rounded-[2px] mb-4">
+          {/* Status Badge */}
+          <div className="w-fit bg-ak-gold text-[#0F172A] text-[10px] font-sans font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-none mb-4">
             {project.status.toUpperCase()}
           </div>
 
@@ -140,7 +141,7 @@ export default function ProjectsShowcase() {
           </div>
 
           {/* Arrow Icon in bottom-right */}
-          <div className="absolute bottom-6 md:bottom-8 right-6 md:right-8 text-white w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-ak-gold group-hover:text-ak-gold transition-colors duration-300">
+          <div className="absolute bottom-6 md:bottom-8 right-6 md:right-8 text-white w-8 h-8 rounded-none border border-white/20 flex items-center justify-center group-hover:border-ak-gold group-hover:text-ak-gold transition-colors duration-300">
             <FiArrowRight size={14} />
           </div>
 
@@ -156,20 +157,20 @@ export default function ProjectsShowcase() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="text-left max-w-xl">
-            <div className="text-ak-gold text-[13px] font-sans font-medium tracking-[0.15em] uppercase">
-              — Our Developments
-            </div>
+            <span className="text-ak-gold text-[11px] font-sans font-medium tracking-[0.15em] uppercase">
+              [ Our Work ]
+            </span>
             
             <h2 className="text-heading text-ak-navy font-serif font-bold mt-4 leading-[1.25]">
-              Developments That Define the Landscape
+              A portfolio of crafted spaces
             </h2>
             
             <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-md">
-              Explore our portfolio of successfully delivered residential layouts, infrastructure networks, and high-yield plotting ventures.
+              Browse some of our beautifully executed modular kitchens, living room partitions, and bespoke wardrobe projects delivered across Hyderabad.
             </p>
           </div>
 
-          {/* Right-aligned Filter Tabs */}
+          {/* Right-aligned Filter Tabs - Underline active, no bg */}
           <div className="flex flex-wrap items-center justify-start md:justify-end gap-2 border-b border-ak-border pb-4 md:pb-2 self-start md:self-end w-full md:w-auto">
             {categories.map((tab) => (
               <button
@@ -193,7 +194,7 @@ export default function ProjectsShowcase() {
           </div>
         </div>
 
-        {/* 2-Column stacked masonry layout (1 column on mobile) */}
+        {/* 2-Column stacked layout (1 column on mobile) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Column 1 */}
           <div className="flex flex-col gap-8">

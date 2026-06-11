@@ -9,7 +9,9 @@ import FloatingActions from "./components/FloatingActions";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
+import SolutionsPage from "./pages/SolutionsPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import EstimatePage from "./pages/EstimatePage";
 import ContactPage from "./pages/ContactPage";
 
 // Scroll restoration to top on route change
@@ -41,7 +43,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/estimate" element={<EstimatePage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

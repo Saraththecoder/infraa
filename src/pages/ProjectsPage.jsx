@@ -7,9 +7,9 @@ export default function ProjectsPage() {
   return (
     <>
       <PageBanner 
-        title="Our Premium Ventures" 
+        title="Our Completed Masterpieces" 
         subtitle="Projects" 
-        eyebrow="— Project Portfolio" 
+        eyebrow="— Portfolio Gallery" 
       />
       <ProjectsShowcase />
       <CTA />

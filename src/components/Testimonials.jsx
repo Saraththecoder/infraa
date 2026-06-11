@@ -1,167 +1,124 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const reviews = [
   {
     name: "K. Srinivasa Rao",
-    role: "Property Investor",
-    text: "Professional team with transparent dealings and excellent support. They guided me through every documentation phase, making my investment experience seamless.",
+    role: "4 BHK Villa Owner, LB Nagar",
+    text: "AK Group transformed our villa with absolute perfection. The modular kitchen is a masterpiece, and their 45-day move-in commitment was met precisely. Unbelievable precision and service!",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
   },
   {
     name: "Anitha Reddy",
-    role: "Residential Plot Owner",
-    text: "Great investment opportunities and trustworthy guidance. Their plots are strategically located with very fast growth rates and complete legal clearance checks.",
+    role: "3 BHK Apartment, Gachibowli",
+    text: "Highly impressed by their 3D planning phase. The renders were photorealistic, and the actual wardrobes look exactly like the designs we approved. The 12-year warranty gives us great peace of mind.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
   },
   {
     name: "Dr. Vikram Kumar",
-    role: "Premium Homebuyer",
-    text: "Highly satisfied with their project quality and customer service. The execution of roads and layout infrastructure is top-notch. I highly recommend them for real estate.",
+    role: "2 BHK Apartment, LB Nagar",
+    text: "The best interior design team in Hyderabad. They offered fully transparent, itemized quoting with zero hidden charges. The soft-close modular cabinets are of superb German quality.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
   }
 ];
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      handleNext();
-    }, 5000); // Auto-advance every 5 seconds
-    return () => clearInterval(timer);
-  }, [current]);
 
   const handlePrev = () => {
-    setDirection(-1);
     setCurrent((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setDirection(1);
     setCurrent((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
   };
 
-  const slideVariants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 100 : -100,
-      opacity: 0
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
-    },
-    exit: (dir) => ({
-      x: dir > 0 ? -100 : 100,
-      opacity: 0,
-      transition: { duration: 0.5, ease: "easeIn" }
-    })
-  };
-
   return (
-    <section id="testimonials" className="section-pad bg-ak-navy-deep relative overflow-hidden">
-      <div className="container-custom relative z-10">
+    <section id="testimonials" className="bg-[#0F172A] py-28 md:py-36 overflow-hidden relative border-t border-white/5">
+      <div className="container-custom relative z-10 text-left">
         
-        {/* Section Header */}
-        <div className="text-left max-w-3xl mb-16">
-          <div className="text-ak-gold text-[13px] font-sans font-medium tracking-[0.15em] uppercase">
-            — Client Feedback
-          </div>
-          
-          <h2 className="text-heading text-white font-serif font-bold mt-4 leading-[1.25]">
-            Client Testimonials
-          </h2>
+        {/* Section Label */}
+        <div className="mb-16">
+          <span className="text-ak-gold text-[11px] font-sans font-medium tracking-[0.15em] uppercase block">
+            [ What Our Clients Say ]
+          </span>
         </div>
 
-        {/* Carousel Slider Card */}
-        <div className="relative min-h-[360px] md:min-h-[300px] bg-white/5 border border-white/8 rounded-[4px] p-10 md:p-12 shadow-ak-lg flex flex-col justify-between overflow-hidden max-w-4xl mx-auto">
+        {/* 2-Column Editorial Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center max-w-5xl">
           
-          {/* Quotes icon decoration (Playfair Display 900, 120px, gold opacity-20, absolute top-left) */}
-          <div className="absolute top-4 left-6 text-ak-gold opacity-20 font-serif font-black text-[120px] leading-none select-none pointer-events-none z-0">
-            “
-          </div>
+          {/* Left Column (60%): Large Pull Quote with absolute quote mark */}
+          <div className="lg:col-span-8 relative pl-12 min-h-[160px] flex items-center">
+            {/* Giant quote mark */}
+            <span 
+              className="absolute top-0 left-0 text-ak-gold opacity-10 font-serif leading-none select-none pointer-events-none"
+              style={{ fontSize: "120px", marginTop: "-40px" }}
+            >
+              “
+            </span>
 
-          <div className="relative z-10 flex-1 flex flex-col justify-between">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
+            <AnimatePresence mode="wait">
+              <motion.blockquote
                 key={current}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                className="w-full text-left"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.4 }}
+                className="font-serif italic text-white/90 leading-relaxed font-light text-2xl md:text-3xl"
               >
-                {/* Rating Stars - 5 gold stars */}
-                <div className="flex gap-1 text-ak-gold text-lg mb-6 leading-none">
-                  {"★★★★★"}
-                </div>
-
-                {/* Review Text */}
-                <blockquote className="text-white/90 font-serif text-lg sm:text-xl md:text-[20px] leading-relaxed italic font-light mb-8 max-w-3xl">
-                  "{reviews[current].text}"
-                </blockquote>
-
-                {/* Client Profile Details */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 border border-white/10 flex-shrink-0">
-                    <img
-                      src={reviews[current].image}
-                      alt={reviews[current].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-sans text-sm font-semibold text-white tracking-wider uppercase mb-1">
-                      {reviews[current].name}
-                    </h4>
-                    <p className="text-xs font-sans text-white/50 tracking-wide font-light">
-                      {reviews[current].role}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+                "{reviews[current].text}"
+              </motion.blockquote>
             </AnimatePresence>
           </div>
 
-          {/* Navigation Controls - Navy styled, gold border & hover */}
-          <div className="absolute bottom-8 right-8 flex gap-3 z-10">
-            <button
-              onClick={handlePrev}
-              className="w-10 h-10 rounded-[2px] border border-white/20 hover:border-ak-gold text-white hover:text-ak-gold flex items-center justify-center transition-all duration-300"
-              aria-label="Previous testimonial"
-            >
-              <FiChevronLeft size={16} />
-            </button>
-            <button
-              onClick={handleNext}
-              className="w-10 h-10 rounded-[2px] border border-white/20 hover:border-ak-gold text-white hover:text-ak-gold flex items-center justify-center transition-all duration-300"
-              aria-label="Next testimonial"
-            >
-              <FiChevronRight size={16} />
-            </button>
+          {/* Right Column (40%): Details and Controls */}
+          <div className="lg:col-span-4 flex flex-col justify-between h-full border-l border-white/10 pl-8 lg:pl-12 py-2">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-4"
+              >
+                {/* Rating */}
+                <div className="text-ak-gold text-lg tracking-wide leading-none">
+                  ★★★★★
+                </div>
+                
+                {/* Client Profile */}
+                <div>
+                  <h4 className="font-serif text-xl font-bold text-white leading-tight">
+                    {reviews[current].name}
+                  </h4>
+                  <p className="text-xs font-sans text-white/45 tracking-wider uppercase mt-1">
+                    {reviews[current].role}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation buttons */}
+            <div className="flex gap-4 mt-8">
+              <button
+                onClick={handlePrev}
+                className="w-11 h-11 rounded-none border border-white/20 hover:border-ak-gold text-white hover:text-ak-gold flex items-center justify-center transition-all duration-300"
+                aria-label="Previous testimonial"
+              >
+                <FiChevronLeft size={18} />
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-11 h-11 rounded-none border border-white/20 hover:border-ak-gold text-white hover:text-ak-gold flex items-center justify-center transition-all duration-300"
+                aria-label="Next testimonial"
+              >
+                <FiChevronRight size={18} />
+              </button>
+            </div>
           </div>
 
-        </div>
-
-        {/* Bubble Indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {reviews.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => {
-                setDirection(idx > current ? 1 : -1);
-                setCurrent(idx);
-              }}
-              className={`w-2 h-2 rounded-full transition-all duration-350 ${
-                current === idx ? "w-6 bg-ak-gold" : "bg-white/20 hover:bg-white/30"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
         </div>
 
       </div>

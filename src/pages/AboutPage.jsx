@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <PageBanner 
-        title="Grounded in AP. Built for Generations." 
+        title="Crafting Dream Interiors with Precision and Trust." 
         subtitle="About Us" 
         eyebrow="— About the Company" 
       />

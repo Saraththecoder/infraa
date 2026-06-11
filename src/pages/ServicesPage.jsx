@@ -9,7 +9,7 @@ export default function ServicesPage() {
       <PageBanner 
         title="Our Services & Solutions" 
         subtitle="Services" 
-        eyebrow="— Architectural & Infrastructure Services" 
+        eyebrow="— Turnkey & Modular Interior Solutions" 
       />
       <Services />
       <CTA />

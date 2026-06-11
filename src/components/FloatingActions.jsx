@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPhoneAlt, FaWhatsapp, FaChevronUp } from "react-icons/fa";
 
@@ -35,7 +36,7 @@ export default function FloatingActions() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollToTop}
-            className="w-11 h-11 rounded-sm bg-primary hover:bg-accent-orange text-white flex items-center justify-center shadow-lg transition-colors duration-300 border border-white/10"
+            className="w-11 h-11 rounded-none bg-ak-navy hover:bg-[#1E293B] text-white flex items-center justify-center shadow-lg transition-colors duration-300 border border-white/10"
             aria-label="Back to top"
           >
             <FaChevronUp size={12} />
@@ -43,34 +44,42 @@ export default function FloatingActions() {
         )}
       </AnimatePresence>
 
+      {/* Floating Sticky Pulse Consultation Button - square corners, gold bg */}
+      <Link
+        to="/contact"
+        className="sticky-pulse-cta bg-ak-gold text-[#0F172A] px-6 py-3.5 text-[11px] font-sans font-bold tracking-widest uppercase rounded-none shadow-lg border border-white/10 hover:bg-ak-gold-light transition-all duration-300 block text-center"
+      >
+        Book Consultation
+      </Link>
+
       {/* Floating Call Button - Navy styled, orange hover */}
       <motion.a
         href="tel:+919948100096"
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-sm bg-primary text-white flex items-center justify-center shadow-lg relative group border border-white/10"
+        className="w-12 h-12 rounded-none bg-ak-navy text-white flex items-center justify-center shadow-lg relative group border border-white/10"
         aria-label="Call business support desk"
       >
-        <span className="absolute inset-0 rounded-sm bg-[#0A2E5C]/20 animate-ping opacity-75" />
-        <FaPhoneAlt size={14} className="relative z-10 group-hover:text-accent-orange transition-colors" />
-        <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
+        <span className="absolute inset-0 rounded-none bg-[#0A2E5C]/20 animate-ping opacity-75" />
+        <FaPhoneAlt size={14} className="relative z-10 group-hover:text-ak-gold transition-colors" />
+        <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-none opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
           Call Desk
         </span>
       </motion.a>
 
-      {/* Floating WhatsApp Button - Navy/White styled to fit corporate guidelines, orange hover */}
+      {/* Floating WhatsApp Button - Navy/White styled */}
       <motion.a
         href="https://wa.me/919948100096"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-sm bg-primary text-white flex items-center justify-center shadow-lg relative group border border-white/10"
+        className="w-12 h-12 rounded-none bg-ak-navy text-white flex items-center justify-center shadow-lg relative group border border-white/10"
         aria-label="Chat via WhatsApp"
       >
-        <span className="absolute inset-0 rounded-sm bg-[#0A2E5C]/20 animate-ping opacity-75" />
-        <FaWhatsapp size={16} className="relative z-10 group-hover:text-accent-orange transition-colors" />
-        <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
+        <span className="absolute inset-0 rounded-none bg-[#0A2E5C]/20 animate-ping opacity-75" />
+        <FaWhatsapp size={16} className="relative z-10 group-hover:text-ak-gold transition-colors" />
+        <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-none opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
           WhatsApp
         </span>
       </motion.a>

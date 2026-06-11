@@ -2,6 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
+function FooterTicker() {
+  const [count, setCount] = React.useState(548);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="pt-2 text-left select-none">
+      <span className="font-serif font-light text-4xl text-[#FAF8F5] leading-none block">
+        {count}
+      </span>
+      <span className="text-[10px] font-sans font-bold tracking-widest text-ak-gold uppercase block mt-1.5">
+        Homes & Layouts Delivered
+      </span>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-ak-navy-deep text-white/60 font-sans">
@@ -28,6 +50,9 @@ export default function Footer() {
           <p className="text-[13px] text-white/50 leading-relaxed max-w-sm">
             ASHWIN AND KIRAN INFRA DEVELOPERS PVT. LTD. (AK Group) is a trusted real estate and infrastructure development company committed to legal transparency and sustainable investment growth.
           </p>
+
+          {/* Animated project counter */}
+          <FooterTicker />
         </div>
 
         {/* Column 2: Company links */}
@@ -48,7 +73,13 @@ export default function Footer() {
               <Link to="/services" className="hover:text-white transition-colors duration-200">Services</Link>
             </li>
             <li>
+              <Link to="/solutions" className="hover:text-white transition-colors duration-200">Solutions</Link>
+            </li>
+            <li>
               <Link to="/projects" className="hover:text-white transition-colors duration-200">Projects</Link>
+            </li>
+            <li>
+              <Link to="/estimate" className="hover:text-white transition-colors duration-200">Estimate</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:text-white transition-colors duration-200">Contact Us</Link>
@@ -65,16 +96,16 @@ export default function Footer() {
           </div>
           <ul className="space-y-3.5 text-[13px]">
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Residential Plotting</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Modular Kitchens</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Real Estate Consulting</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Custom Wardrobes</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Investment Solutions</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Living & Entertainment</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Construction Services</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Turnkey Renovations</Link>
             </li>
           </ul>
         </div>

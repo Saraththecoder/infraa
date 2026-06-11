@@ -7,7 +7,9 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Solutions", href: "/solutions" },
   { name: "Projects", href: "/projects" },
+  { name: "Estimate", href: "/estimate" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -34,7 +36,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[rgba(10,46,92,0.75)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
+            ? "bg-[rgba(15,23,42,0.85)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
             : "bg-transparent py-6"
         }`}
       >
