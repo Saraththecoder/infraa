@@ -92,16 +92,16 @@ export default function WhyChooseUs() {
               variants={cardVariants}
               whileHover={{ 
                 y: -4, 
-                borderBottomColor: "#D97706",
-                boxShadow: "0 8px 32px rgba(7,26,53,0.12)"
+                borderBottomColor: "#F97316",
+                boxShadow: "0 8px 32px rgba(15,23,42,0.12)"
               }}
               key={feat.num}
               className="group relative p-10 bg-white border border-ak-border border-bottom-3 border-b-transparent rounded-[4px] shadow-ak-sm transition-all duration-300 overflow-hidden flex flex-col justify-between"
               style={{ borderBottomWidth: "3px" }}
             >
               <div className="text-left">
-                {/* Thin Navy Icon (stroke based, gold on hover) */}
-                <div className="text-ak-navy group-hover:text-ak-gold transition-colors duration-300 w-10 h-10 flex items-center justify-start">
+                {/* Premium Icon Container */}
+                <div className="icon-container-premium mb-6">
                   {feat.icon}
                 </div>
 
@@ -111,7 +111,7 @@ export default function WhyChooseUs() {
                 </span>
 
                 {/* Title */}
-                <h3 className="text-[20px] font-serif font-bold text-ak-navy mt-6 leading-tight">
+                <h3 className="text-[20px] font-serif font-bold text-ak-navy mt-4 leading-tight">
                   {feat.title}
                 </h3>
                 

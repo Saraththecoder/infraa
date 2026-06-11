@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function DarkIntro() {
   return (
-    <section className="relative bg-[#0F172A] py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-[#0b1a30] py-28 md:py-36 overflow-hidden">
       {/* Background Subtle Dot Pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none"

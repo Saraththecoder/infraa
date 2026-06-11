@@ -73,7 +73,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          background: "linear-gradient(90deg, rgba(15,23,42,0.96) 0%, rgba(15,23,42,0.88) 35%, rgba(15,23,42,0.45) 75%, rgba(15,23,42,0.18) 100%)"
+          background: "linear-gradient(90deg, rgba(11,26,48,0.96) 0%, rgba(11,26,48,0.88) 35%, rgba(11,26,48,0.45) 75%, rgba(11,26,48,0.18) 100%)"
         }}
       />
 
@@ -116,7 +116,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 items-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-ak-gold hover:bg-ak-gold-light text-[#0F172A] font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm"
+              className="px-8 py-4 bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm"
             >
               Book Consultation
             </Link>
@@ -137,7 +137,7 @@ export default function Hero() {
               <motion.div
                 key={slide.title}
                 onClick={() => setActiveIdx(idx)}
-                className={`w-[260px] p-4 border transition-all duration-350 cursor-pointer text-left flex gap-4 items-center bg-slate-950/60 backdrop-blur-md rounded-none ${
+                className={`w-[260px] p-4 border transition-all duration-350 cursor-pointer text-left flex gap-4 items-center bg-[#0b1a30]/70 backdrop-blur-md rounded-none ${
                   isActive ? "border-ak-gold scale-105" : "border-white/10 opacity-55 hover:opacity-85"
                 }`}
                 whileHover={{ x: -6 }}

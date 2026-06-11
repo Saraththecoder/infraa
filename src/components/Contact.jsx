@@ -63,8 +63,8 @@ export default function Contact() {
             <div className="space-y-6">
               {/* Address */}
               <div className="flex gap-4 items-start">
-                <div className="text-ak-navy flex-shrink-0 mt-1">
-                  <FiMapPin size={18} />
+                <div className="w-10 h-10 rounded-full bg-white border border-ak-border text-ak-gold flex items-center justify-center shadow-sm flex-shrink-0">
+                  <FiMapPin size={16} />
                 </div>
                 <div>
                   <h4 className="text-[11px] font-bold font-sans text-ak-muted uppercase tracking-wider">Office Address</h4>
@@ -76,7 +76,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="flex gap-4 items-start">
-                <div className="text-ak-navy flex-shrink-0 mt-1">
+                <div className="w-10 h-10 rounded-full bg-white border border-ak-border text-ak-gold flex items-center justify-center shadow-sm flex-shrink-0">
                   <FiPhone size={16} />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex gap-4 items-start">
-                <div className="text-ak-navy flex-shrink-0 mt-1">
+                <div className="w-10 h-10 rounded-full bg-white border border-ak-border text-ak-gold flex items-center justify-center shadow-sm flex-shrink-0">
                   <FiMail size={16} />
                 </div>
                 <div>
@@ -102,7 +102,7 @@ export default function Contact() {
 
               {/* Hours */}
               <div className="flex gap-4 items-start">
-                <div className="text-ak-navy flex-shrink-0 mt-1">
+                <div className="w-10 h-10 rounded-full bg-white border border-ak-border text-ak-gold flex items-center justify-center shadow-sm flex-shrink-0">
                   <FiClock size={16} />
                 </div>
                 <div>
@@ -222,7 +222,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-8 py-4 bg-ak-gold hover:bg-ak-gold-light disabled:bg-slate-400 text-white font-sans text-sm font-medium tracking-[0.1em] uppercase rounded-[2px] shadow-ak-sm transition-all duration-300 w-full text-center"
+                  className="px-8 py-4 bg-ak-gold hover:bg-ak-gold-light disabled:bg-slate-400 text-ak-navy-deep font-sans text-sm font-medium tracking-[0.1em] uppercase rounded-[2px] shadow-ak-sm transition-all duration-300 w-full text-center"
                 >
                   {isSubmitting ? "Sending message..." : "Submit Request"}
                 </button>

@@ -36,7 +36,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[rgba(15,23,42,0.85)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
+            ? "bg-[rgba(11,26,48,0.9)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
             : "bg-transparent py-6"
         }`}
       >
@@ -86,7 +86,7 @@ export default function Navbar() {
             </a>
             <Link
               to="/contact"
-              className="px-6 py-2.5 bg-ak-gold hover:bg-ak-gold-light text-white text-[13px] font-medium tracking-[0.08em] uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md font-sans"
+              className="px-6 py-2.5 bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep text-[13px] font-medium tracking-[0.08em] uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md font-sans"
             >
               Enquire Now
             </Link>
@@ -175,7 +175,7 @@ export default function Navbar() {
                 <Link
                   to="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center w-full py-3 rounded-[2px] bg-ak-gold hover:bg-ak-gold-light text-white font-sans text-xs font-bold tracking-widest uppercase shadow-ak-sm transition-colors duration-300"
+                  className="flex items-center justify-center w-full py-3 rounded-[2px] bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase shadow-ak-sm transition-colors duration-300"
                 >
                   Enquire Now
                 </Link>

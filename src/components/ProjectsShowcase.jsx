@@ -110,7 +110,7 @@ export default function ProjectsShowcase() {
         <div 
           className="absolute inset-0 transition-opacity duration-300"
           style={{
-            background: "linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.35) 60%, transparent 100%)"
+            background: "linear-gradient(to top, rgba(11, 26, 48, 0.95) 0%, rgba(11, 26, 48, 0.35) 60%, transparent 100%)"
           }}
         />
         
@@ -118,7 +118,7 @@ export default function ProjectsShowcase() {
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-left">
           
           {/* Status Badge */}
-          <div className="w-fit bg-ak-gold text-[#0F172A] text-[10px] font-sans font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-none mb-4">
+          <div className="w-fit bg-ak-gold text-ak-navy-deep text-[10px] font-sans font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-none mb-4">
             {project.status.toUpperCase()}
           </div>
 

@@ -35,7 +35,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="bg-[#0F172A] py-28 md:py-36 overflow-hidden relative border-t border-white/5">
+    <section id="testimonials" className="bg-[#0b1a30] py-28 md:py-36 overflow-hidden relative border-t border-white/5">
       <div className="container-custom relative z-10 text-left">
         
         {/* Section Label */}

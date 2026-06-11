@@ -122,7 +122,7 @@ export default function Services() {
         <div className="text-left mt-12">
           <Link
             to="/contact"
-            className="px-8 py-3.5 bg-ak-navy text-white hover:bg-ak-gold hover:text-[#0F172A] font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-350 inline-block"
+            className="px-8 py-3.5 bg-ak-navy text-white hover:bg-ak-gold hover:text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-350 inline-block"
           >
             Start Your Journey
           </Link>

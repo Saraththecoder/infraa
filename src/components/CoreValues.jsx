@@ -88,13 +88,13 @@ export default function CoreValues() {
               variants={cardVariants}
               whileHover={{ 
                 y: -4, 
-                boxShadow: "0 8px 32px rgba(7,26,53,0.12)"
+                boxShadow: "0 8px 32px rgba(15,23,42,0.12)"
               }}
               key={val.title}
               className="p-8 bg-white border border-ak-border rounded-[4px] shadow-ak-sm transition-all duration-300 flex flex-col items-start text-left group"
             >
-              {/* Clean Navy Icon - transitions to gold on hover */}
-              <div className="text-ak-navy group-hover:text-ak-gold mb-6 transition-colors duration-300 w-10 h-10 flex items-center justify-start">
+              {/* Premium Icon Container */}
+              <div className="icon-container-premium mb-6">
                 {val.icon}
               </div>
 

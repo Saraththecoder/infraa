@@ -6,7 +6,7 @@ export default function VideoReel() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-[#0F172A] py-24 md:py-32 relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#0b1a30] py-24 md:py-32 relative overflow-hidden border-t border-white/5">
       <div className="container-custom relative z-10 text-center">
         
         {/* Label & Title */}

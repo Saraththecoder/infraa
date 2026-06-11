@@ -653,7 +653,7 @@ export default function InteriorCalculator() {
 
                         <button
                           type="submit"
-                          className="w-full mt-6 py-4 bg-ak-gold hover:bg-ak-gold-light text-white font-sans text-xs font-bold tracking-widest uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm flex items-center justify-center gap-2 cursor-pointer"
+                          className="w-full mt-6 py-4 bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm flex items-center justify-center gap-2 cursor-pointer"
                         >
                           <FiPhoneCall size={12} /> Claim Quote & Design Call
                         </button>

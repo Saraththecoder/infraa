@@ -63,7 +63,7 @@ export default function BeforeAfterSlider() {
   }, [isDragging]);
 
   return (
-    <section className="bg-[#0F172A] py-28 md:py-32 overflow-hidden relative border-t border-white/5">
+    <section className="bg-[#0b1a30] py-28 md:py-32 overflow-hidden relative border-t border-white/5">
       <div className="container-custom relative z-10 text-center">
         
         {/* Section Header */}

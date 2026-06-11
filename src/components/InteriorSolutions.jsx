@@ -98,8 +98,10 @@ export default function InteriorSolutions() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full lg:w-1/2 text-left flex flex-col items-start"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="text-ak-gold">{sol.icon}</div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-white border border-ak-border text-ak-gold flex items-center justify-center shadow-sm">
+                    {sol.icon}
+                  </div>
                   <span className="text-ak-gold text-[12px] font-sans font-bold tracking-widest uppercase">
                     {sol.subtitle}
                   </span>

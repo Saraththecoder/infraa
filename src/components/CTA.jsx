@@ -7,7 +7,7 @@ export default function CTA() {
     <section 
       className="py-[120px] relative overflow-hidden text-center"
       style={{
-        backgroundColor: "#0F172A",
+        backgroundColor: "#0b1a30",
         backgroundImage: "radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
         backgroundSize: "32px 32px"
       }}
@@ -41,7 +41,7 @@ export default function CTA() {
             {/* Call Now button */}
             <a
               href="tel:+919948100096"
-              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-ak-gold hover:bg-ak-gold-light text-[#0F172A] font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm hover:shadow-ak-md w-full sm:w-auto text-center"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-ak-gold hover:bg-ak-gold-light text-ak-navy font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm hover:shadow-ak-md w-full sm:w-auto text-center"
             >
               <FaPhoneAlt size={12} />
               <span>Call Now</span>
