@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-function Counter({ value, duration = 1.5 }) {
+function Counter({ value, duration = 2.0 }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -16,10 +16,13 @@ function Counter({ value, duration = 1.5 }) {
     }
 
     let startTimestamp = null;
+    const easeOutQuad = (t) => t * (2 - t);
+
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / (duration * 1000), 1);
-      setCount(Math.floor(progress * numericTarget));
+      const easedProgress = easeOutQuad(progress);
+      setCount(Math.floor(easedProgress * numericTarget));
       if (progress < 1) {
         window.requestAnimationFrame(step);
       } else {
@@ -65,8 +68,8 @@ export default function Statistics() {
       {/* Row 1: Large decorative backdrop text watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
         <span 
-          className="font-serif font-black text-white/4 text-center leading-none tracking-wider whitespace-nowrap block"
-          style={{ fontSize: "clamp(120px, 18vw, 220px)" }}
+          className="font-serif font-black text-white opacity-[0.04] text-center leading-none tracking-wider whitespace-nowrap block"
+          style={{ fontSize: "clamp(100px, 15vw, 200px)" }}
         >
           AK GROUP
         </span>

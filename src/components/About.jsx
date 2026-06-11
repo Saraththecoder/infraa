@@ -36,8 +36,8 @@ export default function About() {
                 <span className="text-white font-serif text-5xl font-bold leading-none">
                   5+
                 </span>
-                <span className="text-[11px] font-sans font-medium tracking-[0.12em] uppercase text-white/85 mt-2.5 leading-tight">
-                  Years Of Excellence
+                <span className="text-[10px] font-sans font-bold tracking-[0.15em] uppercase text-white/90 mt-2.5 leading-tight">
+                  YEARS OF EXCELLENCE
                 </span>
               </motion.div>
             </div>
@@ -74,15 +74,16 @@ export default function About() {
             {/* Divider Line */}
             <div className="w-10 h-[1px] bg-ak-border my-7" />
 
-            {/* Two Inline Stats */}
-            <div className="flex gap-12 items-center w-full">
+            {/* Two Inline Stats with Divider */}
+            <div className="flex gap-10 items-center w-full mt-6">
               <div className="flex flex-col text-left">
-                <span className="font-serif text-3xl font-bold text-ak-navy">100+</span>
-                <span className="font-sans text-[13px] text-ak-muted mt-1">Satisfied Clients</span>
+                <span className="font-serif text-[28px] font-bold text-ak-navy leading-none">100+</span>
+                <span className="font-sans text-[13px] text-ak-muted mt-2">Satisfied Clients</span>
               </div>
+              <div className="w-[1px] h-10 bg-ak-border self-center" />
               <div className="flex flex-col text-left">
-                <span className="font-serif text-3xl font-bold text-ak-navy">20+</span>
-                <span className="font-sans text-[13px] text-ak-muted mt-1">Projects Delivered</span>
+                <span className="font-serif text-[28px] font-bold text-ak-navy leading-none">20+</span>
+                <span className="font-sans text-[13px] text-ak-muted mt-2">Projects Delivered</span>
               </div>
             </div>
 

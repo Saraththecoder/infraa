@@ -63,13 +63,12 @@ body {
 /* Global Typography Resets and Overrides */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
-  color: #0A2E5C;
 }
 
 /* Fluid Typography Utilities using clamp() */
 .text-hero {
   font-family: "Playfair Display", serif;
-  font-size: clamp(52px, 6vw, 96px);
+  font-size: clamp(40px, 5.2vw, 72px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;

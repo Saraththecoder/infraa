@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-start p-0 overflow-hidden bg-ak-navy-deep"
+      className="relative min-h-screen flex flex-col justify-center pt-28 pb-[72px] overflow-hidden bg-ak-navy-deep"
     >
       {/* Background Image Layer with fixed parallax treatment */}
       <div 
@@ -35,21 +35,12 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(105deg, rgba(7, 26, 53, 0.92) 0%, rgba(7, 26, 53, 0.60) 60%, rgba(7, 26, 53, 0.20) 100%)"
+          background: "linear-gradient(90deg, rgba(10,46,92,0.92) 0%, rgba(10,46,92,0.78) 35%, rgba(10,46,92,0.35) 70%, rgba(10,46,92,0.1) 100%)"
         }}
       />
 
-      <div className="relative z-10 w-full pl-[clamp(20px,8vw,120px)] pr-6 flex flex-col justify-center text-left">
-        <div className="max-w-2xl">
-          {/* Eyebrow Label */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-ak-gold text-[13px] font-sans font-medium tracking-[0.15em] uppercase"
-          >
-            — Andhra Pradesh's Trusted Infra Developer
-          </motion.div>
+      <div className="container-custom relative z-10 w-full flex flex-col text-left py-12 md:py-16">
+        <div className="max-w-[600px]">
 
           {/* Hero Headline */}
           <div className="mt-6 flex flex-col">
@@ -71,13 +62,13 @@ export default function Hero() {
             </motion.h1>
           </div>
 
-          {/* Gold Horizontal Rule */}
+          {/* Gold Horizontal Rule (Margin 24px 0 / my-6) */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             style={{ transformOrigin: "left" }}
-            className="h-[3px] w-[72px] bg-ak-gold my-7"
+            className="h-[3px] w-[72px] bg-ak-gold my-6"
           />
 
           {/* Subheadline */}
@@ -114,30 +105,30 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero bottom bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-[72px] bg-white/5 backdrop-blur-[8px] z-10 border-t border-white/8 hidden md:block">
+      {/* Hero bottom metrics bar styled as glassmorphism */}
+      <div className="absolute bottom-0 left-0 right-0 h-[72px] bg-[rgba(10,46,92,0.35)] backdrop-blur-[12px] z-10 border-t border-white/10 hidden md:block">
         <div className="grid grid-cols-4 h-full items-center text-center text-white font-sans text-xs tracking-wider uppercase font-medium">
-          <div className="border-r border-white/12 h-full flex items-center justify-center">5+ Years Experience</div>
-          <div className="border-r border-white/12 h-full flex items-center justify-center">100+ Happy Clients</div>
-          <div className="border-r border-white/12 h-full flex items-center justify-center">20+ Projects Completed</div>
-          <div className="border-r border-white/12 h-full flex items-center justify-center">Andhra Pradesh</div>
+          <div className="border-r border-white/10 h-full flex items-center justify-center">5+ Years</div>
+          <div className="border-r border-white/10 h-full flex items-center justify-center">100+ Projects</div>
+          <div className="border-r border-white/10 h-full flex items-center justify-center">500+ Customers</div>
+          <div className="h-full flex items-center justify-center">100% Trust</div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator (Fade on scroll) */}
       {showScroll && (
         <div className="absolute bottom-24 md:bottom-28 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none">
-          <div className="w-[1px] h-[60px] bg-white/30 relative overflow-hidden">
+          <div className="w-[1px] h-[60px] bg-white/30 relative">
             <motion.div
               animate={{
-                y: [-60, 60],
+                y: [0, 54],
               }}
               transition={{
-                duration: 2,
+                duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-0 left-0 right-0 h-[12px] bg-ak-gold"
+              className="absolute top-0 left-[-2.5px] w-[6px] h-[6px] rounded-full bg-ak-gold"
             />
           </div>
         </div>

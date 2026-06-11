@@ -32,9 +32,9 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[#071A35]/92 backdrop-blur-md py-4 border-b border-white/8 shadow-ak-sm"
+            ? "bg-[rgba(10,46,92,0.75)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
             : "bg-transparent py-6"
         }`}
       >
@@ -43,16 +43,18 @@ export default function Navbar() {
           {/* Logo - logo.png + Text */}
           <Link
             to="/"
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-3 group text-left"
           >
             <img src="/logo.png" alt="AK Group Logo" className="h-8 w-auto object-contain" />
-            <div className="flex flex-col text-left">
-              <span className="font-serif text-lg font-bold tracking-wider text-white leading-none">
-                AK GROUP
+            <div className="flex items-center gap-2.5">
+              <span className="font-serif text-[24px] font-bold text-white leading-none">
+                AK
               </span>
-              <span className="text-[9px] font-sans font-medium tracking-[0.18em] uppercase text-ak-gold leading-none mt-1">
-                INFRA DEVELOPERS
-              </span>
+              <div className="w-[1px] h-5 bg-[#D97706]" />
+              <div className="flex flex-col text-[11px] font-sans font-medium uppercase tracking-[0.05em] text-[#D97706] leading-none">
+                <span>GROUP</span>
+                <span className="mt-0.5">INFRA</span>
+              </div>
             </div>
           </Link>
 
@@ -76,9 +78,9 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-6">
             <a
               href="tel:+919948100096"
-              className="font-sans text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
+              className="font-sans text-[13px] font-normal text-white hover:text-ak-gold transition-colors duration-200"
             >
-              99481 00096
+              +91 99481 00096
             </a>
             <Link
               to="/contact"
@@ -124,16 +126,18 @@ export default function Navbar() {
                 <Link
                   to="/"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center gap-2 text-left"
+                  className="flex items-center gap-2.5 text-left"
                 >
                   <img src="/logo.png" alt="AK Group Logo" className="h-7 w-auto object-contain" />
-                  <div className="flex flex-col">
-                    <span className="font-serif text-sm font-bold tracking-wider text-white leading-none">
-                      AK GROUP
+                  <div className="flex items-center gap-2">
+                    <span className="font-serif text-[20px] font-bold text-white leading-none">
+                      AK
                     </span>
-                    <span className="text-[8px] font-sans font-medium tracking-[0.18em] uppercase text-ak-gold leading-none mt-1">
-                      INFRA DEVELOPERS
-                    </span>
+                    <div className="w-[1px] h-4 bg-[#D97706]" />
+                    <div className="flex flex-col text-[9px] font-sans font-medium uppercase tracking-[0.05em] text-[#D97706] leading-none">
+                      <span>GROUP</span>
+                      <span className="mt-0.5">INFRA</span>
+                    </div>
                   </div>
                 </Link>
                 <button

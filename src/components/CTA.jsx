@@ -4,11 +4,14 @@ import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function CTA() {
   return (
-    <section className="py-[120px] bg-ak-navy bg-dot-grid relative overflow-hidden text-center">
-      {/* Background glow mesh accents */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-ak-gold/5 blur-[120px]" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-white/5 blur-[120px]" />
-
+    <section 
+      className="py-[120px] relative overflow-hidden text-center"
+      style={{
+        backgroundColor: "#0A2E5C",
+        backgroundImage: "radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
+        backgroundSize: "32px 32px"
+      }}
+    >
       <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}

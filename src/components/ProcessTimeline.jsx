@@ -63,21 +63,21 @@ export default function ProcessTimeline() {
 
         {/* Desktop View (Horizontal Timeline) */}
         <div className="hidden lg:block relative mt-24 pb-12">
-          {/* Connecting Track Line centered at the height of step-number circles (26px) */}
+          {/* Connecting Track Line */}
           <div 
             className="absolute h-[2px] bg-ak-border z-0" 
-            style={{ top: "26px", left: "8.33%", right: "8.33%" }} 
+            style={{ top: "26px", left: "5%", width: "90%" }} 
           />
           <motion.div 
             initial={{ width: 0 }}
-            whileInView={{ width: "83.34%" }}
+            whileInView={{ width: "90%" }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute h-[2px] bg-ak-gold z-0" 
-            style={{ top: "26px", left: "8.33%" }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute h-[2px] bg-[#D97706] z-0" 
+            style={{ top: "26px", left: "5%" }}
           />
 
-          <div className="grid grid-cols-6 gap-6 relative z-10">
+          <div className="flex justify-between items-start gap-4 relative z-10 w-full">
             {steps.map((step, idx) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export default function ProcessTimeline() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 key={step.num}
-                className="flex flex-col items-center group text-center"
+                className="flex flex-col items-center group text-center flex-1"
               >
                 {/* Connector Circle with step number (Playfair Display 700 20px) */}
                 <div className="w-13 h-13 rounded-full bg-white border-2 border-ak-gold text-ak-navy group-hover:bg-ak-gold group-hover:text-white flex items-center justify-center shadow-ak-sm transition-all duration-300 select-none cursor-pointer">
@@ -96,7 +96,7 @@ export default function ProcessTimeline() {
 
                 {/* Step Title (Inter 600 14px) */}
                 <h3 className="font-sans font-semibold text-sm text-ak-navy tracking-wide mt-6">
-                  {step.title}
+                   {step.title}
                 </h3>
 
                 {/* Description (Inter 400 12px) */}
