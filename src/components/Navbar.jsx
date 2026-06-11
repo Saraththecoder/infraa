@@ -5,12 +5,12 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Solutions", href: "/solutions" },
+  { name: "Interior Solutions", href: "/solutions" },
   { name: "Projects", href: "/projects" },
   { name: "Estimate", href: "/estimate" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

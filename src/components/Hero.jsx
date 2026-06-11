@@ -4,22 +4,22 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
+    src: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw",
+    title: "Premium Plots",
+    tagline: "HMDA & DTCP Approved Gated Communities",
+    eyebrow: "Legally verified plots & clear titles"
+  },
+  {
     src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-    title: "Modular Kitchens",
-    tagline: "Bespoke Parallel & L-Shape Layouts",
+    title: "Independent Villas",
+    tagline: "Premium Architected Villas & Apartments",
+    eyebrow: "Prime locations & sustainable growth"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop",
+    title: "Bespoke Interiors",
+    tagline: "Turnkey Modular Kitchens & Custom Closets",
     eyebrow: "Factory fabrication intelligence"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1600&auto=format&fit=crop",
-    title: "Living Lounges",
-    tagline: "Contemporary Custom Media Panels",
-    eyebrow: "Ambient profile lighting integration"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1600&auto=format&fit=crop",
-    title: "Master Suites",
-    tagline: "Floor-to-Ceiling Wardrobes & Closets",
-    eyebrow: "Termite-proof panel engineering"
   }
 ];
 
@@ -164,10 +164,10 @@ export default function Hero() {
       {/* Bottom metrics bar styled as glassmorphic */}
       <div className="absolute bottom-0 left-0 right-0 h-[64px] bg-white/[0.04] backdrop-blur-[8px] z-10 border-t border-white/10 hidden md:block">
         <div className="max-w-[1360px] mx-auto grid grid-cols-4 h-full items-center text-center text-white/80 font-sans text-[11px] tracking-wider uppercase font-medium">
-          <div className="border-r border-white/12 h-full flex items-center justify-center">12-Year Warranty</div>
-          <div className="border-r border-white/12 h-full flex items-center justify-center">45-Day Move-In</div>
-          <div className="border-r border-white/12 h-full flex items-center justify-center">100% Customized</div>
-          <div className="h-full flex items-center justify-center">Hyderabad Studio</div>
+          <div className="border-r border-white/12 h-full flex items-center justify-center">100% Verified Titles</div>
+          <div className="border-r border-white/12 h-full flex items-center justify-center">HMDA & DTCP Approved</div>
+          <div className="border-r border-white/12 h-full flex items-center justify-center">Bespoke Design Delivery</div>
+          <div className="h-full flex items-center justify-center">12-Year Structural Warranty</div>
         </div>
       </div>
 

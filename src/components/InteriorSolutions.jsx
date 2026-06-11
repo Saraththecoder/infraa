@@ -1,58 +1,84 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGrid, FiLayout, FiMaximize, FiCpu, FiCheckCircle } from "react-icons/fi";
+import { FiGrid, FiLayout, FiMaximize, FiCpu, FiCheckCircle, FiBriefcase, FiAward } from "react-icons/fi";
 
 const solutionsList = [
   {
-    title: "Modular Kitchen Solutions",
-    subtitle: "Heart of the Home",
+    title: "Design Services",
+    subtitle: "Spatial Layouts",
+    icon: <FiLayout size={24} />,
+    image: "https://images.unsplash.com/photo-1501183007986-d0d080b147f9?q=80&w=800&auto=format&fit=crop",
+    desc: "Comprehensive space planning, architectural drafting, and high-fidelity 3D renderings to envision your layouts.",
+    features: [
+      "2D Floor Plans & room layouts",
+      "3D Designs & Visualization rendering",
+      "Electrical & conduit wiring plans",
+      "Lighting placement & reflected ceiling plans"
+    ]
+  },
+  {
+    title: "Modular Solutions",
+    subtitle: "Advanced Carcasses",
     icon: <FiGrid size={24} />,
     image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-    desc: "Engineered for high utility and smooth ergonomics, our kitchen configurations are tailored to your spatial layout.",
+    desc: "Precision modular cabinetry manufactured on European CNC lines with absolute dimensional accuracy.",
     features: [
-      "Shapes: L-Shape, Parallel, U-Shape, Island kitchens",
-      "Materials: BWP Marine Ply & HDHMR water-resistant board",
-      "Finishes: High-gloss German Acrylic, PU Paint, Glass profiles",
-      "Fittings: Soft-close Hettich tandem boxes & Hafele lift-ups"
+      "Modular Kitchens: L-Shape, Parallel, U-Shape layouts",
+      "Wardrobe Design: Classic Swing & space-saving Sliding doors",
+      "Calibrated anti-termite ply & HDHMR materials",
+      "Premium soft-close tandem drawer systems"
     ]
   },
   {
-    title: "Bespoke Wardrobes & Closets",
-    subtitle: "Smart Storage Layouts",
-    icon: <FiLayout size={24} />,
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
-    desc: "Maximize bedroom storage with floor-to-ceiling closets that match your design preferences.",
-    features: [
-      "Door Opening: Sliding glass doors, classic swing, walk-in closets",
-      "Carcass: Calibrated anti-termite ply with laminate lining",
-      "Finishes: Matte laminate, tinted reflective glass, PU lacquer",
-      "Smart Add-ons: Automatic sensor LEDs, secure digital lockers"
-    ]
-  },
-  {
-    title: "Living & Entertainment Units",
-    subtitle: "Social Statement Spaces",
+    title: "Residential Interiors",
+    subtitle: "Cozy Lifestyles",
     icon: <FiMaximize size={24} />,
-    image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=800&auto=format&fit=crop",
-    desc: "Custom floating TV consoles and partitions designed to organize and elevate your primary living zone.",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop",
+    desc: "Custom home interior tailoring including feature TV panel backdrops, sliding glass dividers, and bedroom claddings.",
     features: [
-      "TV Panels: Marble-textured laminates, fluted louvers",
-      "Partitions: CNC jali cuts, wooden rafters, glass panels",
-      "Bar Units: Integrated wine glass racks & ambient mirror backings",
-      "Shoe Racks: Custom ventilated storage boxes & seating benches"
+      "Living Room Interiors: Louvers & fluted paneling",
+      "Bedroom Interiors: Padded headboards & study units",
+      "Foyers, shoe consoles & custom display cabinets",
+      "Integrated profile LED strip integrations"
     ]
   },
   {
-    title: "False Ceiling & Profile Lighting",
-    subtitle: "Aesthetic Overhead Layouts",
-    icon: <FiCpu size={24} />,
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
-    desc: "Architectural plasterboard ceilings integrated with high-end linear and magnetic diffuse lighting.",
+    title: "Commercial Interiors",
+    subtitle: "Productive Offices",
+    icon: <FiBriefcase size={24} />,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+    desc: "Functional commercial office spaces configured for optimal workspace efficiency, visitor flows, and styling.",
     features: [
-      "Ceilings: Gypsum boards with sturdy metal perimeter channels",
-      "Track Lights: Modular magnetic tracks & recess LED spots",
-      "Ambient Lighting: Dimmable LED coves & decorative profile lines",
-      "Acoustics: Soundproofing ceiling linings for home theatres"
+      "Commercial Office Interiors & layouts",
+      "Modular staff workstations & manager desks",
+      "Board rooms, conference spaces & reception desk panels",
+      "Acoustic partition screens & cable managers"
+    ]
+  },
+  {
+    title: "Execution & Construction",
+    subtitle: "Turnkey Handover",
+    icon: <FiCpu size={24} />,
+    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=800&auto=format&fit=crop",
+    desc: "Certified execution technicians covering civil shifts, track wiring, paint coat handovers, and ceiling designs.",
+    features: [
+      "Civil Work: Slab shifts, plumbing modifications, and tiling",
+      "Electrical Work: Wiring adjustments & lighting track layouts",
+      "Painting Services: Double-coat acrylic emulsion finish",
+      "Gypsum Ceiling: Perimeter channels & designer coves"
+    ]
+  },
+  {
+    title: "Specialty Solutions",
+    subtitle: "Elite Add-ons",
+    icon: <FiAward size={24} />,
+    image: "https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=800&auto=format&fit=crop",
+    desc: "Elite acoustic additions and decorative features that transform basic rooms into dedicated luxury experiences.",
+    features: [
+      "Home Theatre: Sound absorption boards & screen panels",
+      "Wall Arts & Decor: High-quality customized claddings",
+      "Ambient bar counter setups & home libraries",
+      "Digital security safety locks & storage safes"
     ]
   }
 ];

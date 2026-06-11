@@ -1,42 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiShield, FiClock, FiFileText, FiAward, FiSettings, FiSliders } from "react-icons/fi";
+import { FiShield, FiClock, FiAward, FiSliders, FiMapPin, FiTrendingUp } from "react-icons/fi";
 
 const features = [
   {
     num: "01",
-    title: "45-Day Move-in Guarantee",
-    description: "Enjoy a guaranteed 45-day move-in timeline from design sign-off. If we delay, we pay your rent.",
-    icon: <FiClock size={24} />
-  },
-  {
-    num: "02",
-    title: "Flat 12-Year Warranty",
-    description: "Every modular kitchen and wardrobe is backed by a robust 12-year warranty for absolute peace of mind.",
+    title: "100% Legal Clear Titles",
+    description: "Every plot and layout in our portfolio is thoroughly verified by legal cell experts. Clear titles, clean paperwork, and zero investment risk.",
     icon: <FiShield size={24} />
   },
   {
+    num: "02",
+    title: "HMDA & DTCP Layouts",
+    description: "Our developments feature complete blacktop roads, underground electricity conduits, water channels, and government approvals.",
+    icon: <FiMapPin size={24} />
+  },
+  {
     num: "03",
-    title: "No Hidden Costs",
-    description: "Receive fully itemized, transparent quotes with zero surprises. What you see is what you pay.",
-    icon: <FiFileText size={24} />
+    title: "Investment Advisory",
+    description: "Empower your portfolio with detailed micro-market surveys and ROI guidance blueprints in high-growth Hyderabad corridors.",
+    icon: <FiTrendingUp size={24} />
   },
   {
     num: "04",
-    title: "100% Customized Designs",
-    description: "Personalized room layouts, modular configurations, and color combinations styled around your lifestyle.",
-    icon: <FiSliders size={24} />
+    title: "45-Day Move-in Guarantee",
+    description: "Enjoy a guaranteed 45-day move-in timeline from interior design sign-off. If we delay, we pay your rent.",
+    icon: <FiClock size={24} />
   },
   {
     num: "05",
-    title: "German Machine Finish",
-    description: "Fabricated with state-of-the-art European CNC machinery for perfect alignment, clean joints, and extreme durability.",
-    icon: <FiSettings size={24} />
+    title: "12-Year Modular Warranty",
+    description: "Every modular kitchen and wardrobe is backed by a robust 12-year warranty for absolute structural peace of mind.",
+    icon: <FiSliders size={24} />
   },
   {
     num: "06",
     title: "Zero-Stress Turnkey Handover",
-    description: "We handle civil alterations, false ceilings, lighting layouts, painting, and modular assembly under one dedicated supervisor.",
+    description: "We handle civil works, false ceilings, electrical loops, painting, and modular assembly under a single supervisor desk.",
     icon: <FiAward size={24} />
   }
 ];

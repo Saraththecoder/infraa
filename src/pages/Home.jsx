@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import MarqueeTicker from "../components/MarqueeTicker";
 import DarkIntro from "../components/DarkIntro";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Services from "../components/Services";
 import InteriorCalculator from "../components/InteriorCalculator";
 import Statistics from "../components/Statistics";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
@@ -18,6 +19,7 @@ export default function Home() {
       <MarqueeTicker />
       <DarkIntro />
       <WhyChooseUs />
+      <Services />
       <InteriorCalculator />
       <Statistics />
       <BeforeAfterSlider />

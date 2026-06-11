@@ -96,16 +96,16 @@ export default function Footer() {
           </div>
           <ul className="space-y-3.5 text-[13px]">
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Modular Kitchens</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Plot Sales & Investments</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Custom Wardrobes</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Residential Property Sales</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Living & Entertainment</Link>
+              <Link to="/services" className="hover:text-white transition-colors duration-200">Real Estate Advisory</Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-white transition-colors duration-200">Turnkey Renovations</Link>
+              <Link to="/solutions" className="hover:text-white transition-colors duration-200">Bespoke Interior Solutions</Link>
             </li>
           </ul>
         </div>
