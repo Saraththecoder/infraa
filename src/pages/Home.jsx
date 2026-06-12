@@ -5,6 +5,7 @@ import DarkIntro from "../components/DarkIntro";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
 import Statistics from "../components/Statistics";
+import Leadership from "../components/Leadership";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import ProcessTimeline from "../components/ProcessTimeline";
 import Testimonials from "../components/Testimonials";
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyChooseUs />
       <Services />
       <Statistics />
+      <Leadership />
       <BeforeAfterSlider />
       <ProcessTimeline />
       <Testimonials />

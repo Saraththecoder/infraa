@@ -60,7 +60,7 @@ export default function Hero() {
           <div
             key={slide.title}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-              activeIdx === idx ? "opacity-35 scale-100" : "opacity-0 scale-105"
+              activeIdx === idx ? "opacity-55 scale-100" : "opacity-0 scale-105"
             }`}
             style={{ 
               backgroundImage: `url('${slide.src}')`,
@@ -74,7 +74,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          background: "linear-gradient(90deg, rgba(11,26,48,0.96) 0%, rgba(11,26,48,0.88) 35%, rgba(11,26,48,0.45) 75%, rgba(11,26,48,0.18) 100%)"
+          background: "linear-gradient(90deg, rgba(11,26,48,0.96) 0%, rgba(11,26,48,0.82) 35%, rgba(11,26,48,0.35) 70%, rgba(11,26,48,0.10) 100%)"
         }}
       />
 
