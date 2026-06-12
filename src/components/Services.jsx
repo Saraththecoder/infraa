@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import { 
   FiArrowRight, 
   FiShield, 
@@ -101,30 +102,6 @@ const realEstateServices = [
       { text: "Portfolio consulting", icon: "FiUsers" }
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    num: "05",
-    title: "Independent Houses",
-    description: "Premium architectural design and construction of independent houses, luxury duplexes, and triplexes across prime zones. Crafted with premium raw materials and high-end elevations.",
-    bullets: [
-      { text: "Custom layouts & designs", icon: "FiAward" },
-      { text: "Earthquake resistant structures", icon: "FiShield" },
-      { text: "12-Year structural warranty", icon: "FiHome" },
-      { text: "Bespoke elevations & styling", icon: "FiCompass" }
-    ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255658/Modern-Villa-Design-with-car-parking_pfgbls.webp"
-  },
-  {
-    num: "06",
-    title: "Apartments",
-    description: "Modern apartments and multi-family residential gated communities constructed with outstanding ventilation, fire-safety compliance, premium amenities, and reliable water sources.",
-    bullets: [
-      { text: "Gated safety systems", icon: "FiShield" },
-      { text: "Premium common areas", icon: "FiLayers" },
-      { text: "Rainwater harvesting slots", icon: "FiCompass" },
-      { text: "High resale appreciation", icon: "FiTrendingUp" }
-    ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255773/high-rise-building-definition-design-safety-800x400_ch1ryp.webp"
   }
 ];
 
@@ -166,42 +143,6 @@ const landServices = [
   },
   {
     num: "04",
-    title: "Open Lands",
-    description: "Raw acreage and strategic bulk land parcels with clear titles, boundary walls, and direct highway connectivity, perfect for long-term investments or future community planning.",
-    bullets: [
-      { text: "Clear title & registration", icon: "FiCheckCircle" },
-      { text: "Secure boundary walls", icon: "FiShield" },
-      { text: "Strategic road access", icon: "FiMapPin" },
-      { text: "Bulk land banking ROI", icon: "FiTrendingUp" }
-    ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255282/Country-Bank-aerial-view-of-plot-of-green-land-1024x683_pi8blb.webp"
-  },
-  {
-    num: "05",
-    title: "Open Plots",
-    description: "Gated layout open plots with HMDA & DTCP approvals, underground drainage, electricity cables, community parks, and standard civic amenities ready for villa construction.",
-    bullets: [
-      { text: "HMDA & DTCP approved", icon: "FiCheckCircle" },
-      { text: "Underground civic conduits", icon: "FiGrid" },
-      { text: "BT Blacktop internal roads", icon: "FiMapPin" },
-      { text: "Immediate villa building suit", icon: "FiHome" }
-    ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255404/h8hbnx6-1736165878-551639287-optorig-1_mklnx4.webp"
-  },
-  {
-    num: "06",
-    title: "Agricultural Lands",
-    description: "Suburban farm lands and managed agricultural layout plots with fertile soil, active water source setups, and secure fencing, offering an organic lifestyle or land banking value.",
-    bullets: [
-      { text: "Suburban farmhouse layouts", icon: "FiCompass" },
-      { text: "Clear water source access", icon: "FiGrid" },
-      { text: "Secure wire fencing lines", icon: "FiShield" },
-      { text: "Natural eco environments", icon: "FiHome" }
-    ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255573/ankur_ex65ul.webp"
-  },
-  {
-    num: "07",
     title: "Commercial Lands",
     description: "High-potential commercial-zoned land parcels situated along busy highway corridors and junction lines, optimized for warehouses, showrooms, or retail parks.",
     bullets: [
@@ -211,12 +152,32 @@ const landServices = [
       { text: "Rapid commercial growth", icon: "FiTrendingUp" }
     ],
     image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255601/mumbai-highway-facing-open-plots-1000x1000_wqrqtj.webp"
+  },
+  {
+    num: "05",
+    title: "Open Lands",
+    description: "Raw acreage and strategic bulk land parcels with clear titles, boundary walls, and direct highway connectivity, perfect for long-term investments.",
+    bullets: [
+      { text: "Clear title & registration", icon: "FiCheckCircle" },
+      { text: "Secure boundary walls", icon: "FiShield" },
+      { text: "Strategic road access", icon: "FiMapPin" },
+      { text: "Bulk land banking ROI", icon: "FiTrendingUp" }
+    ],
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255282/Country-Bank-aerial-view-of-plot-of-green-land-1024x683_pi8blb.webp"
   }
 ];
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState("lands");
-  const [hoveredIdx, setHoveredIdx] = useState(0);
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState(() => {
+    return location.state?.tab === "lands" ? "lands" : "real-estate";
+  });
+
+  useEffect(() => {
+    if (location.state?.tab) {
+      setActiveTab(location.state.tab);
+    }
+  }, [location.state]);
 
   const currentServices = activeTab === "real-estate" ? realEstateServices : landServices;
   const currentCat = categories.find((c) => c.id === activeTab) || categories[0];
@@ -247,9 +208,8 @@ export default function Services() {
               key={cat.id}
               onClick={() => {
                 setActiveTab(cat.id);
-                setHoveredIdx(0);
               }}
-              className={`relative px-6 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-300 font-sans ${
+              className={`relative px-6 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-300 font-sans cursor-pointer ${
                 activeTab === cat.id
                   ? "text-ak-gold"
                   : "text-ak-muted hover:text-ak-navy"
@@ -266,40 +226,52 @@ export default function Services() {
           ))}
         </div>
 
-        {/* List Layout with Image Preview Frame */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mt-12">
-          
-          {/* Left: List items (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col border-t border-ak-border">
-            {currentServices.map((service, idx) => (
-              <div
-                key={service.title}
-                onMouseEnter={() => setHoveredIdx(idx)}
-                className="flex items-start gap-6 py-8 border-b border-ak-border cursor-pointer transition-all duration-300 hover:pl-4 group"
-              >
-                {/* Number */}
-                <span className="font-serif font-light text-5xl md:text-6xl text-ak-navy/10 group-hover:text-ak-gold transition-colors duration-300 min-w-[70px] select-none text-left">
+        {/* Grid Layout: Photos First, Matter Next */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-12">
+          {currentServices.map((service, idx) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="bg-white border border-ak-border rounded-none shadow-ak-sm hover:shadow-ak-lg transition-all duration-350 flex flex-col group overflow-hidden"
+            >
+              {/* Photo First: Card Image Frame */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-200">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+                {/* Number Badge overlay */}
+                <div className="absolute top-4 left-4 bg-ak-navy text-white text-[11px] font-serif font-bold px-3 py-1.5 shadow-md">
                   {service.num}
-                </span>
+                </div>
+                {/* Elegant overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-ak-navy/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              </div>
 
-                {/* Info */}
-                <div className="flex-1 text-left">
+              {/* Matter Next: Card Content */}
+              <div className="p-6 md:p-8 flex flex-col flex-1 text-left justify-between">
+                <div>
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-ak-navy group-hover:text-ak-gold transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-ak-muted font-sans text-xs md:text-sm mt-2 max-w-lg leading-relaxed">
+                  
+                  <p className="text-ak-muted font-sans text-xs md:text-sm mt-3 leading-relaxed">
                     {service.description}
                   </p>
 
-                   {/* Bullet points pills */}
+                  {/* Bullet points tags */}
                   {service.bullets && (
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="mt-5 flex flex-wrap gap-2">
                       {service.bullets.map((bullet) => (
                         <span 
                           key={bullet.text} 
-                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[2px] bg-ak-navy/5 text-ak-navy text-[11px] font-sans font-medium hover:bg-ak-gold/10 hover:text-ak-gold transition-colors duration-200"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-[2px] bg-ak-navy/5 text-ak-navy text-[10px] font-sans font-medium hover:bg-ak-gold/10 hover:text-ak-gold transition-colors duration-200"
                         >
-                          {iconMap[bullet.icon] || <FiCheckCircle size={12} className="text-ak-gold shrink-0" />}
+                          {iconMap[bullet.icon] || <FiCheckCircle size={10} className="text-ak-gold shrink-0" />}
                           <span>{bullet.text}</span>
                         </span>
                       ))}
@@ -307,45 +279,38 @@ export default function Services() {
                   )}
                 </div>
 
-                {/* Sliding Arrow */}
-                <span className="text-ak-gold opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <FiArrowRight size={22} />
-                </span>
+                {/* Bottom Card CTA Buttons */}
+                <div className="mt-6 pt-4 border-t border-ak-border grid grid-cols-2 gap-3">
+                  {/* WhatsApp button */}
+                  <a
+                    href={`https://wa.me/919948100096?text=Hi%2C%20I%20am%20interested%20in%20your%20service%3A%20${encodeURIComponent(service.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 py-2 px-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-sans text-[11px] font-bold tracking-wider uppercase transition-all duration-300 text-center shadow-sm"
+                  >
+                    <FaWhatsapp size={13} className="shrink-0" />
+                    <span>WhatsApp</span>
+                  </a>
+
+                  {/* Call button */}
+                  <a
+                    href="tel:+919948100096"
+                    className="flex items-center justify-center gap-2 py-2 px-3 bg-ak-navy hover:bg-ak-gold text-white hover:text-ak-navy-deep font-sans text-[11px] font-bold tracking-wider uppercase transition-all duration-300 text-center shadow-sm"
+                  >
+                    <FaPhone size={11} className="shrink-0" />
+                    <span>Call</span>
+                  </a>
+                </div>
               </div>
-            ))}
-          </div>
-
-          {/* Right: Floating/Sticky Preview Frame (5 cols) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28 h-[360px] md:h-[450px] w-full bg-white border border-ak-border shadow-ak-md rounded-none overflow-hidden relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab + "-" + hoveredIdx}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-                className="absolute inset-0 w-full h-full"
-              >
-                <img
-                  src={currentServices[hoveredIdx]?.image}
-                  alt={currentServices[hoveredIdx]?.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Subtle dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <span className="absolute bottom-6 left-6 text-white font-serif text-2xl font-bold">
-                  {currentServices[hoveredIdx]?.title}
-                </span>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
+            </motion.div>
+          ))}
         </div>
 
+        {/* Start Your Journey Button */}
         <div className="text-left mt-12">
           <Link
             to="/contact"
-            className="px-8 py-3.5 bg-ak-navy text-white hover:bg-ak-gold hover:text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-350 inline-block"
+            className="px-8 py-3.5 bg-ak-navy text-white hover:bg-ak-gold hover:text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-350 inline-block shadow-ak-md"
           >
             Start Your Journey
           </Link>

@@ -6,10 +6,10 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Real Estate", href: "/services" },
+  { name: "Real Estate", href: "/services", state: { tab: "real-estate" } },
+  { name: "Lands", href: "/services", state: { tab: "lands" } },
   { name: "Interior Solutions", href: "/solutions" },
   { name: "Projects", href: "/projects" },
-  { name: "Estimate", href: "/estimate" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -63,11 +63,17 @@ export default function Navbar() {
           {/* Desktop Links - Center aligned */}
           <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.href;
+              const isActive =
+                location.pathname === link.href &&
+                (link.href !== "/services" ||
+                  (link.state?.tab === "lands"
+                    ? location.state?.tab === "lands"
+                    : location.state?.tab !== "lands"));
               return (
                 <Link
                   key={link.name}
                   to={link.href}
+                  state={link.state}
                   className={`nav-link-custom ${isActive ? "active-link" : ""}`}
                 >
                   {link.name}
@@ -153,11 +159,17 @@ export default function Navbar() {
 
               <nav className="flex-1 overflow-y-auto px-6 py-10 flex flex-col gap-10 text-left">
                 {navLinks.map((link) => {
-                  const isActive = location.pathname === link.href;
+                  const isActive =
+                    location.pathname === link.href &&
+                    (link.href !== "/services" ||
+                      (link.state?.tab === "lands"
+                        ? location.state?.tab === "lands"
+                        : location.state?.tab !== "lands"));
                   return (
                     <Link
                       key={link.name}
                       to={link.href}
+                      state={link.state}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`text-[15px] font-semibold tracking-wider uppercase font-serif py-1 transition-colors ${
                         isActive

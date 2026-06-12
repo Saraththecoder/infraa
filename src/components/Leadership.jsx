@@ -4,17 +4,17 @@ import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 const founders = [
   {
-    name: "Ashwin",
-    role: "Founder & Managing Director",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+    name: "V Ashwin Kumar",
+    role: "Director",
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266630/37ea1e7e-5f10-422f-a993-7deea36a48e0_t4x6bl.jpg",
     bio: "Under Ashwin's strategic leadership, AK Group has acquired and developed high-value land parcels across Andhra Pradesh. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
     specialties: ["Land Acquisition", "Legal & Regulatory Compliance", "Corporate Strategy"],
     email: "ashwin@akgroupinfra.com"
   },
   {
-    name: "Kiran",
-    role: "Founder & Executive Director",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+    name: "K Kiran Kumar",
+    role: "Director",
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266645/987c2816-f181-401b-8f56-505a78e2b6ac_icgp7w.jpg",
     bio: "Kiran oversees project execution, site development infrastructure, and investor partnerships. His customer-first approach ensures that every residential plotted layout meets elite municipal design guidelines and creates high investment yields.",
     specialties: ["Infrastructure Development", "Investor Partnerships", "Operations & Quality Control"],
     email: "kiran@akgroupinfra.com"

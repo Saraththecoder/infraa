@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
 export default function CTA() {
   return (
@@ -47,6 +47,15 @@ export default function CTA() {
             >
               <FaWhatsapp size={14} />
               <span>WhatsApp Us</span>
+            </a>
+
+            {/* Call button */}
+            <a
+              href="tel:+919948100096"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/40 hover:border-white text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
+            >
+              <FaPhone size={12} />
+              <span>Call Us</span>
             </a>
 
           </div>

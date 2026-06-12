@@ -105,7 +105,7 @@ export default function Hero() {
 
               {/* Subheadline description */}
               <p className="text-subhead text-white/70 max-w-[500px] mt-6 leading-relaxed font-sans font-light text-lg">
-                {slides[activeIdx].tagline}. Premium real estate infrastructure developments and bespoke home interior solutions across Hyderabad.
+                {slides[activeIdx].tagline}.
               </p>
             </motion.div>
           </AnimatePresence>
