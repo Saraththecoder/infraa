@@ -38,56 +38,116 @@ const iconMap = {
   FiUsers: <FiUsers size={12} className="text-ak-gold shrink-0" />
 };
 
-const categoryInfo = { 
-  eyebrow: "[ Gated Layouts & Land Investments ]", 
-  headline: "Premium Plotted Layouts & Real Estate Investments", 
-  description: "Ashwin and Kiran (AK) Group delivers premium HMDA & DTCP approved plotted developments, open plot sales, and expert real estate investments across Hyderabad." 
-};
+const categories = [
+  { 
+    id: "real-estate", 
+    name: "Real Estate", 
+    eyebrow: "[ Built Architecture & Investments ]", 
+    headline: "Premium Villas, Apartments & Advisory", 
+    description: "Ashwin and Kiran (AK) Group construct high-end independent villas, premium apartments, and commercial projects across Hyderabad's prime sectors." 
+  },
+  { 
+    id: "lands", 
+    name: "Lands", 
+    eyebrow: "[ Plotted Gated Communities ]", 
+    headline: "HMDA & DTCP Approved Plotted Developments", 
+    description: "Discover legally verified open plots, premium gated layout investments, and suburban farm lands with high future valuation." 
+  }
+];
 
-const landServices = [
+const realEstateServices = [
   {
     num: "01",
-    title: "Plot Sales & Land Investments",
-    description: "Gated community open plots in prime locations featuring legally verified plots, clear titles, verified documentation, and high ROI potential.",
+    title: "Independent Luxury Villas",
+    description: "Premium architected 4 BHK and 5 BHK independent house developments with state-of-the-art civil infrastructure, green backyards, and modular layouts.",
     bullets: [
-      { text: "Legally verified plots", icon: "FiShield" },
-      { text: "Land investments", icon: "FiTrendingUp" },
-      { text: "Verified documentation", icon: "FiFileText" },
-      { text: "Prime locations", icon: "FiMapPin" },
-      { text: "Clear titles", icon: "FiCheckCircle" }
-    ],
-    image: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw"
-  },
-  {
-    num: "02",
-    title: "Residential Property Sales",
-    description: "Premium independent houses, luxury villas, and budget-friendly apartments tailored to home seekers and portfolio builders.",
-    bullets: [
-      { text: "Apartments", icon: "FiLayers" },
-      { text: "Villas", icon: "FiHome" },
-      { text: "Independent houses", icon: "FiCompass" },
-      { text: "Budget-friendly homes", icon: "FiDollarSign" },
-      { text: "Premium homes", icon: "FiAward" }
+      { text: "Premium homes", icon: "FiAward" },
+      { text: "Earthquake resistant", icon: "FiShield" },
+      { text: "Villas & duplexes", icon: "FiHome" },
+      { text: "Private courtyard slots", icon: "FiCompass" }
     ],
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop"
   },
   {
+    num: "02",
+    title: "Apartments & Gated Communities",
+    description: "Modern, budget-friendly and luxury high-rise apartments constructed in prime sectors, featuring excellent ventilation and premium fixtures.",
+    bullets: [
+      { text: "Apartments & flats", icon: "FiLayers" },
+      { text: "Budget-friendly homes", icon: "FiDollarSign" },
+      { text: "Gated safety systems", icon: "FiShield" }
+    ],
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop"
+  },
+  {
     num: "03",
+    title: "Commercial Office Spaces",
+    description: "Sleek retail complexes, corporate staff cabins, and warehouse infrastructures developed along primary suburban highway corridors.",
+    bullets: [
+      { text: "Commercial outlets", icon: "FiBriefcase" },
+      { text: "High traffic corridors", icon: "FiMapPin" },
+      { text: "Structured floor plans", icon: "FiGrid" }
+    ],
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    num: "04",
     title: "Real Estate Investment Advisory",
-    description: "Data-driven property investment consulting including professional investment planning, detailed market analysis, and ROI guidance.",
+    description: "Data-driven property consulting, ROI projections, micro-market survey evaluations, and legal compliance checks.",
     bullets: [
       { text: "Investment planning", icon: "FiBriefcase" },
       { text: "Market analysis", icon: "FiBarChart2" },
       { text: "ROI guidance", icon: "FiPercent" },
-      { text: "Portfolio diversification", icon: "FiGrid" },
-      { text: "Property investment consulting", icon: "FiUsers" }
+      { text: "Portfolio consulting", icon: "FiUsers" }
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
   }
 ];
 
+const landServices = [
+  {
+    num: "01",
+    title: "Open Plot Sales",
+    description: "Gated community open plots in high-growth suburban corridors featuring legally verified documents, link papers, and immediate registration suitability.",
+    bullets: [
+      { text: "Legally verified plots", icon: "FiShield" },
+      { text: "Clear titles check", icon: "FiCheckCircle" },
+      { text: "Verified documentation", icon: "FiFileText" },
+      { text: "High ROI potential", icon: "FiTrendingUp" }
+    ],
+    image: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw"
+  },
+  {
+    num: "02",
+    title: "HMDA & DTCP Approved Layouts",
+    description: "Premium plotted layouts fully developed with wide BT blacktop roads, underground water pipes, electricity conduits, and green community parks.",
+    bullets: [
+      { text: "Approved layouts", icon: "FiCheckCircle" },
+      { text: "BT Blacktop roads", icon: "FiMapPin" },
+      { text: "Avenue plantation", icon: "FiHome" },
+      { text: "Electricity & water lines", icon: "FiGrid" }
+    ],
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    num: "03",
+    title: "Suburban Agricultural & Farm Lands",
+    description: "High-value agricultural holdings and green farmhouse plots perfect for long-term land banking and weekend getaways.",
+    bullets: [
+      { text: "Suburban farm lands", icon: "FiCompass" },
+      { text: "Clear boundaries fencing", icon: "FiShield" },
+      { text: "Strategic land banking", icon: "FiTrendingUp" }
+    ],
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop"
+  }
+];
+
 export default function Services() {
+  const [activeTab, setActiveTab] = useState("real-estate");
   const [hoveredIdx, setHoveredIdx] = useState(0);
+
+  const currentServices = activeTab === "real-estate" ? realEstateServices : landServices;
+  const currentCat = categories.find((c) => c.id === activeTab) || categories[0];
 
   return (
     <section id="services" className="section-pad bg-ak-offwhite relative overflow-hidden">
@@ -96,16 +156,42 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12">
           <span className="text-ak-gold text-[11px] font-sans font-medium tracking-[0.15em] uppercase">
-            {categoryInfo.eyebrow}
+            {currentCat.eyebrow}
           </span>
           
           <h2 className="text-heading text-ak-navy font-serif font-bold mt-4 leading-[1.25]">
-            {categoryInfo.headline}
+            {currentCat.headline}
           </h2>
           
           <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-xl">
-            {categoryInfo.description}
+            {currentCat.description}
           </p>
+        </div>
+
+        {/* Tab Controls for Services separation */}
+        <div className="flex gap-2 border-b border-ak-border pb-4 mb-10 w-full justify-start overflow-x-auto whitespace-nowrap">
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => {
+                setActiveTab(cat.id);
+                setHoveredIdx(0);
+              }}
+              className={`relative px-6 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-300 font-sans ${
+                activeTab === cat.id
+                  ? "text-ak-gold"
+                  : "text-ak-muted hover:text-ak-navy"
+              }`}
+            >
+              {cat.name}
+              {activeTab === cat.id && (
+                <motion.div
+                  layoutId="activeServiceTab"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-ak-gold"
+                />
+              )}
+            </button>
+          ))}
         </div>
 
         {/* List Layout with Image Preview Frame */}
@@ -113,7 +199,7 @@ export default function Services() {
           
           {/* Left: List items (7 cols) */}
           <div className="lg:col-span-7 flex flex-col border-t border-ak-border">
-            {landServices.map((service, idx) => (
+            {currentServices.map((service, idx) => (
               <div
                 key={service.title}
                 onMouseEnter={() => setHoveredIdx(idx)}
@@ -161,7 +247,7 @@ export default function Services() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 h-[360px] md:h-[450px] w-full bg-white border border-ak-border shadow-ak-md rounded-none overflow-hidden relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={hoveredIdx}
+                key={activeTab + "-" + hoveredIdx}
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
@@ -169,14 +255,14 @@ export default function Services() {
                 className="absolute inset-0 w-full h-full"
               >
                 <img
-                  src={landServices[hoveredIdx]?.image}
-                  alt={landServices[hoveredIdx]?.title}
+                  src={currentServices[hoveredIdx]?.image}
+                  alt={currentServices[hoveredIdx]?.title}
                   className="w-full h-full object-cover"
                 />
                 {/* Subtle dark gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <span className="absolute bottom-6 left-6 text-white font-serif text-2xl font-bold">
-                  {landServices[hoveredIdx]?.title}
+                  {currentServices[hoveredIdx]?.title}
                 </span>
               </motion.div>
             </AnimatePresence>
