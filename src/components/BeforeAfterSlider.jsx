@@ -5,8 +5,8 @@ const transformations = [
   {
     id: "kitchen",
     title: "Modular Kitchen Transformation",
-    before: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop"
+    before: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255911/new-empty-room-under-construction-plaster-walls-home-concrete-interior-renovation-166454551_vscu0i.webp",
+    after: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255943/modern-kitchen-in-luxury-home-with-island-and-hardwood-floor_nse36b.webp"
   },
   {
     id: "living",

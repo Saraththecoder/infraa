@@ -5,19 +5,19 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const slides = [
   {
-    src: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw",
+    src: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781253919/635fe7f0b5b306cb7a8d027147c9f8e1_bre7ge.webp",
     title: "Premium Plots",
     tagline: "HMDA & DTCP Approved Gated Communities",
     eyebrow: "Legally verified plots & clear titles"
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781254017/villas-8216974_piy7qq.webp",
     title: "Independent Villas",
     tagline: "Premium Architected Villas & Apartments",
     eyebrow: "Prime locations & sustainable growth"
   },
   {
-    src: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255261/Bespoke-home-office-by-Dina-H_zimm1l.webp",
     title: "Bespoke Interiors",
     tagline: "Turnkey Modular Kitchens & Custom Closets",
     eyebrow: "Factory fabrication intelligence"

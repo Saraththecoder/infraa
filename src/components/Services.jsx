@@ -66,7 +66,7 @@ const realEstateServices = [
       { text: "Villas & duplexes", icon: "FiHome" },
       { text: "Private courtyard slots", icon: "FiCompass" }
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255658/Modern-Villa-Design-with-car-parking_pfgbls.webp"
   },
   {
     num: "02",
@@ -77,7 +77,7 @@ const realEstateServices = [
       { text: "Budget-friendly homes", icon: "FiDollarSign" },
       { text: "Gated safety systems", icon: "FiShield" }
     ],
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255773/high-rise-building-definition-design-safety-800x400_ch1ryp.webp"
   },
   {
     num: "03",
@@ -112,7 +112,7 @@ const realEstateServices = [
       { text: "12-Year structural warranty", icon: "FiHome" },
       { text: "Bespoke elevations & styling", icon: "FiCompass" }
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255658/Modern-Villa-Design-with-car-parking_pfgbls.webp"
   },
   {
     num: "06",
@@ -124,7 +124,7 @@ const realEstateServices = [
       { text: "Rainwater harvesting slots", icon: "FiCompass" },
       { text: "High resale appreciation", icon: "FiTrendingUp" }
     ],
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255773/high-rise-building-definition-design-safety-800x400_ch1ryp.webp"
   }
 ];
 
@@ -139,7 +139,7 @@ const landServices = [
       { text: "Verified documentation", icon: "FiFileText" },
       { text: "High ROI potential", icon: "FiTrendingUp" }
     ],
-    image: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255573/ankur_ex65ul.webp"
   },
   {
     num: "02",
@@ -151,7 +151,7 @@ const landServices = [
       { text: "Avenue plantation", icon: "FiHome" },
       { text: "Electricity & water lines", icon: "FiGrid" }
     ],
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255404/h8hbnx6-1736165878-551639287-optorig-1_mklnx4.webp"
   },
   {
     num: "03",
@@ -162,7 +162,7 @@ const landServices = [
       { text: "Clear boundaries fencing", icon: "FiShield" },
       { text: "Strategic land banking", icon: "FiTrendingUp" }
     ],
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255573/ankur_ex65ul.webp"
   },
   {
     num: "04",
@@ -174,7 +174,7 @@ const landServices = [
       { text: "Strategic road access", icon: "FiMapPin" },
       { text: "Bulk land banking ROI", icon: "FiTrendingUp" }
     ],
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255282/Country-Bank-aerial-view-of-plot-of-green-land-1024x683_pi8blb.webp"
   },
   {
     num: "05",
@@ -186,7 +186,7 @@ const landServices = [
       { text: "BT Blacktop internal roads", icon: "FiMapPin" },
       { text: "Immediate villa building suit", icon: "FiHome" }
     ],
-    image: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255404/h8hbnx6-1736165878-551639287-optorig-1_mklnx4.webp"
   },
   {
     num: "06",
@@ -198,7 +198,7 @@ const landServices = [
       { text: "Secure wire fencing lines", icon: "FiShield" },
       { text: "Natural eco environments", icon: "FiHome" }
     ],
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255573/ankur_ex65ul.webp"
   },
   {
     num: "07",
@@ -210,12 +210,12 @@ const landServices = [
       { text: "High utility connectivity", icon: "FiLayers" },
       { text: "Rapid commercial growth", icon: "FiTrendingUp" }
     ],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255601/mumbai-highway-facing-open-plots-1000x1000_wqrqtj.webp"
   }
 ];
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState("real-estate");
+  const [activeTab, setActiveTab] = useState("lands");
   const [hoveredIdx, setHoveredIdx] = useState(0);
 
   const currentServices = activeTab === "real-estate" ? realEstateServices : landServices;

@@ -7,7 +7,6 @@ import Services from "../components/Services";
 import InteriorCalculator from "../components/InteriorCalculator";
 import Statistics from "../components/Statistics";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
-import VideoReel from "../components/VideoReel";
 import ProcessTimeline from "../components/ProcessTimeline";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
@@ -23,7 +22,6 @@ export default function Home() {
       <InteriorCalculator />
       <Statistics />
       <BeforeAfterSlider />
-      <VideoReel />
       <ProcessTimeline />
       <Testimonials />
       <CTA />

@@ -8,16 +8,6 @@ export default function VideoReel() {
   return (
     <section className="bg-[#0b1a30] py-24 md:py-32 relative overflow-hidden border-t border-white/5">
       <div className="container-custom relative z-10 text-center">
-        
-        {/* Label & Title */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <span className="text-ak-gold text-[11px] font-sans font-medium tracking-[0.15em] uppercase">
-            [ Studio Workreel ]
-          </span>
-          <h2 className="font-serif italic text-4xl md:text-5xl text-[#FAF8F5] font-light mt-4 leading-tight">
-            Craftsmanship in motion.
-          </h2>
-        </div>
 
         {/* Video Thumbnail Frame - Full viewport width/fit container, square design */}
         <div 
