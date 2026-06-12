@@ -24,17 +24,17 @@ export default function DarkIntro() {
         >
           {/* Eyebrow Label */}
           <span className="text-ak-gold text-[11px] font-sans font-medium tracking-[0.15em] uppercase">
-            [ Design Philosophy ]
+            [ Vision & Philosophy ]
           </span>
 
           {/* Heading */}
           <h2 className="font-serif italic text-4xl md:text-6xl text-[#FAF8F5] font-light mt-6 leading-tight max-w-2xl">
-            Where every corner becomes a conversation.
+            Building foundations where legacy meets lifestyle.
           </h2>
 
           {/* Philosophy Paragraph */}
           <p className="mt-8 text-white/65 font-sans text-base md:text-lg leading-relaxed max-w-2xl font-light">
-            At AK Group, we believe that design is not merely about styling walls or fitting furniture. It is about creating spatial harmony that mirrors your legacy. By combining legal precision, structural engineering expertise, and premium modular craftsmanship, we build habitats engineered for generations.
+            At AK Group, we believe that a home begins long before the walls are built—it starts with a legally secure, prime piece of land. By combining legal precision, structural engineering expertise, and premium modular craftsmanship, we deliver masterfully planned plotted developments and turnkey interior designs engineered for generations.
           </p>
 
           {/* CTA Ghost Button */}

@@ -2,15 +2,15 @@ import React from "react";
 
 export default function MarqueeTicker() {
   const marqueeItems = [
-    "Living Room",
-    "Bedroom",
-    "Modular Kitchen",
-    "Wardrobe",
-    "Pooja Unit",
-    "Home Office",
-    "False Ceiling",
-    "Luxury Plotted Layouts",
-    "Turnkey Civil Work"
+    "Premium Plotted Layouts",
+    "HMDA & DTCP Approved",
+    "Gated Communities",
+    "Clear Title Lands",
+    "Luxury Independent Villas",
+    "Bespoke Interiors",
+    "Modular Kitchens",
+    "Custom Closets",
+    "Turnkey Renovations"
   ];
 
   // Repeat items to ensure seamless loop

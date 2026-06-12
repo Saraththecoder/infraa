@@ -61,16 +61,16 @@ const iconMap = {
 const categories = [
   { 
     id: "lands", 
-    name: "Services (Real Estate)", 
-    eyebrow: "[ Gated Layouts & Advisory ]", 
-    headline: "Plot sales, residential sales & advisory", 
-    description: "Ashwin and Kiran (AK) Group delivers premium HMDA/DTCP plotted developments, open plot sales, and expert real estate investments across Hyderabad." 
+    name: "Real Estate & Plots", 
+    eyebrow: "[ Gated Layouts & Land Investments ]", 
+    headline: "Premium Plotted Layouts & Real Estate Investments", 
+    description: "Ashwin and Kiran (AK) Group delivers premium HMDA & DTCP approved plotted developments, open plot sales, and expert real estate investments across Hyderabad." 
   },
   { 
     id: "interiors", 
     name: "Interior Solutions", 
     eyebrow: "[ Bespoke Interiors ]", 
-    headline: "Premium interior architectural solutions", 
+    headline: "Premium Turnkey Interior Architectural Solutions", 
     description: "From turnkey modular kitchens to detailed False Ceilings and Home Theatre systems, we design spaces styled around your lifestyle." 
   }
 ];

@@ -32,7 +32,7 @@ export default function CTA() {
           
           {/* Subheading */}
           <p className="mt-4 text-subhead text-white/65 max-w-xl font-light">
-            Meet our interior design architects for a free consultation and personalized 3D plan.
+            Secure your premium plot or consult our interior architects for a personalized 3D design plan.
           </p>
 
           {/* Buttons row */}

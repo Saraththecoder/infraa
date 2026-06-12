@@ -4,21 +4,21 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const reviews = [
   {
-    name: "K. Srinivasa Rao",
-    role: "4 BHK Villa Owner, LB Nagar",
-    text: "AK Group transformed our villa with absolute perfection. The modular kitchen is a masterpiece, and their 45-day move-in commitment was met precisely. Unbelievable precision and service!",
+    name: "V. Ramesh Kumar",
+    role: "Plot Owner, Greenfield Gated Community",
+    text: "AK Group delivered our gated plotted community layout with absolute perfection. Their link documents and title check were 100% legally clear, and construction approvals were processed instantly.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
   },
   {
-    name: "Anitha Reddy",
-    role: "3 BHK Apartment, Gachibowli",
-    text: "Highly impressed by their 3D planning phase. The renders were photorealistic, and the actual wardrobes look exactly like the designs we approved. The 12-year warranty gives us great peace of mind.",
+    name: "Dr. Ananya Sen",
+    role: "Villa & Interior Client, Gachibowli",
+    text: "We purchased our villa plot through AK Group and had them execute the turnkey structural construction and bespoke interiors. It was incredibly convenient to have layout legal work, civil structures, and premium modular carpentry completed under a single supervisor desk.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
   },
   {
-    name: "Dr. Vikram Kumar",
-    role: "2 BHK Apartment, LB Nagar",
-    text: "The best interior design team in Hyderabad. They offered fully transparent, itemized quoting with zero hidden charges. The soft-close modular cabinets are of superb German quality.",
+    name: "K. Prasad",
+    role: "Real Estate Investor, Miyapur Corridor",
+    text: "As a real estate investor, transparent pricing and clear DTCP/HMDA layouts are my highest priorities. AK Group has consistently delivered high-ROI plotted ventures with clear title documentation and excellent blacktop road connectivity.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
   }
 ];

@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { FiEye, FiTarget, FiCheck } from "react-icons/fi";
 
 const missionPoints = [
-  "Deliver factory-finished modular furniture matching European quality audits.",
-  "Provide absolute itemized price quotes with zero hidden modifications.",
-  "Adhere strictly to our 45-day handover promise from design sign-off.",
-  "Embrace spatial interior design innovations and virtual 3D planning.",
-  "Offer reliable lifetime utility backed by a flat 12-year warranty."
+  "Develop premium HMDA & DTCP gated community plots with clear, legally verified titles.",
+  "Construct high-end independent villas and residential layouts using state-of-the-art engineering.",
+  "Deliver factory-finished modular home interiors with European quality craftsmanship.",
+  "Maintain absolute transparency in pricing with zero hidden charges or modifications.",
+  "Ensure timeline-bound delivery across all plots, constructions, and interior handovers."
 ];
 
 export default function VisionMission() {
@@ -37,7 +37,7 @@ export default function VisionMission() {
               </h3>
 
               <p className="text-ak-navy font-serif text-lg md:text-xl leading-relaxed font-light italic">
-                "To become Hyderabad's most trusted premium interior design studio by delivering creative spatial layouts, durable modular craftsmanship, and absolute timeline punctuality."
+                "To be Hyderabad's most trusted real estate developer and premium interior design partner, delivering high-growth gated communities, clear legal titles, and exceptional custom home spaces."
               </p>
             </div>
 

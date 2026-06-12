@@ -98,13 +98,13 @@ export default function Hero() {
 
               {/* Headline */}
               <h1 className="text-hero text-white leading-tight font-serif mt-6">
-                Designing spaces <br />
-                <span className="italic text-ak-gold font-light">that echo your legacy.</span>
+                Developing lands, <br />
+                <span className="italic text-ak-gold font-light">crafting legacies.</span>
               </h1>
 
               {/* Subheadline description */}
               <p className="text-subhead text-white/70 max-w-[500px] mt-6 leading-relaxed font-sans font-light text-lg">
-                {slides[activeIdx].tagline}. Premium home interior fabrication and real estate infrastructure developments across Hyderabad.
+                {slides[activeIdx].tagline}. Premium real estate infrastructure developments and bespoke home interior solutions across Hyderabad.
               </p>
             </motion.div>
           </AnimatePresence>

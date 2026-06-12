@@ -7,9 +7,9 @@ export default function ServicesPage() {
   return (
     <>
       <PageBanner 
-        title="Our Services & Solutions" 
-        subtitle="Services" 
-        eyebrow="— Turnkey & Modular Interior Solutions" 
+        title="Our Real Estate & Interior Services" 
+        subtitle="Real Estate" 
+        eyebrow="— Premium Developments & Turnkey Interiors" 
       />
       <Services />
       <CTA />

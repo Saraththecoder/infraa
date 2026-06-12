@@ -64,10 +64,10 @@ export default function About() {
             {/* Paragraphs */}
             <div className="text-ak-slate font-sans text-body-custom leading-relaxed space-y-6 mt-6">
               <p>
-                ASHWIN AND KIRAN INFRA DEVELOPERS PVT. LTD. (AK Group) is a premier real estate development firm committed to raising the benchmark of plotted layouts and residential infrastructure.
+                ASHWIN AND KIRAN INFRA DEVELOPERS PVT. LTD. (AK Group) is a premier real estate development and turnkey interiors firm committed to raising the benchmark of plotted layouts, residential infrastructure, and custom living spaces.
               </p>
               <p>
-                We execute developments across Andhra Pradesh's high-growth corridors. Every venture is subjected to rigorous legal vetting and is designed to create substantial investment value for landowners and homebuilders.
+                We execute developments across Andhra Pradesh's high-growth corridors. Every venture is subjected to rigorous legal vetting and is designed to create substantial investment value, which is then seamlessly completed with our premium bespoke interior solutions division.
               </p>
             </div>
 

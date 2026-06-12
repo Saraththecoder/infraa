@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
           </h2>
           
           <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-xl">
-            We provide hassle-free home interior solutions backed by manufacturing intelligence, strict design execution deadlines, and reliable warranties.
+            We deliver premium plotted developments and bespoke interior solutions backed by verified clear titles, engineering excellence, and execution guarantees.
           </p>
         </div>
 

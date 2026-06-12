@@ -10,12 +10,12 @@ const values = [
   },
   {
     title: "Integrity",
-    description: "We promise fully itemized, transparent quotes with zero hidden charges, adhering strictly to our 45-day move-in guarantee.",
+    description: "We ensure legally clear titles for all plots and fully transparent pricing for construction and interiors, maintaining absolute transaction integrity.",
     icon: <FiCheckCircle size={24} />
   },
   {
     title: "Quality",
-    description: "From 3D spatial planning to modular fabrication and on-site assembly, we insist on uncompromising finish standards.",
+    description: "From gated layout development and villa construction to bespoke interior fabrication, we maintain uncompromising quality standards.",
     icon: <FiAward size={24} />
   },
   {
@@ -25,12 +25,12 @@ const values = [
   },
   {
     title: "Innovation",
-    description: "Integrating smart space-saving modular fittings, sliding wardrobe technologies, and virtual reality walk-throughs.",
+    description: "Integrating smart infrastructure planning, modern civil construction, and state-of-the-art modular interior design technologies.",
     icon: <FiZap size={24} />
   },
   {
     title: "Customer Satisfaction",
-    description: "We place homeowners at the heart of our operations, supporting them at every step of design planning, handover, and beyond.",
+    description: "We support clients through every phase—from land purchase and title verification to construction, interior handover, and beyond.",
     icon: <FiSmile size={24} />
   }
 ];
@@ -71,7 +71,7 @@ export default function CoreValues() {
           </h2>
           
           <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-xl mx-auto">
-            Our guiding principles define how we design, manufacture, and deliver your dream home interiors every single day.
+            Our guiding principles define how we develop prime land plots, construct residential landmarks, and deliver bespoke living spaces every single day.
           </p>
         </div>
 

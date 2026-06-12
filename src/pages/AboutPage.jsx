@@ -10,9 +10,9 @@ export default function AboutPage() {
   return (
     <>
       <PageBanner 
-        title="Crafting Dream Interiors with Precision and Trust." 
+        title="Developing Premium Real Estate & Custom Living Spaces." 
         subtitle="About Us" 
-        eyebrow="— About the Company" 
+        eyebrow="— Real Estate & Interior Pioneers" 
       />
       <About />
       <Leadership />

@@ -45,20 +45,20 @@ function Counter({ value, duration = 2.0 }) {
 
 const stats = [
   {
-    value: "12",
-    label: "Years Warranty"
+    value: "100%",
+    label: "Clear Titles"
+  },
+  {
+    value: "25+",
+    label: "Landmarks Delivered"
   },
   {
     value: "500+",
-    label: "Homes Completed"
+    label: "Happy Families"
   },
   {
-    value: "45",
-    label: "Days Delivery"
-  },
-  {
-    value: "100%",
-    label: "Satisfaction"
+    value: "12-Yr",
+    label: "Modular Warranty"
   }
 ];
 
