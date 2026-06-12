@@ -101,6 +101,30 @@ const realEstateServices = [
       { text: "Portfolio consulting", icon: "FiUsers" }
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    num: "05",
+    title: "Independent Houses",
+    description: "Premium architectural design and construction of independent houses, luxury duplexes, and triplexes across prime zones. Crafted with premium raw materials and high-end elevations.",
+    bullets: [
+      { text: "Custom layouts & designs", icon: "FiAward" },
+      { text: "Earthquake resistant structures", icon: "FiShield" },
+      { text: "12-Year structural warranty", icon: "FiHome" },
+      { text: "Bespoke elevations & styling", icon: "FiCompass" }
+    ],
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+  },
+  {
+    num: "06",
+    title: "Apartments",
+    description: "Modern apartments and multi-family residential gated communities constructed with outstanding ventilation, fire-safety compliance, premium amenities, and reliable water sources.",
+    bullets: [
+      { text: "Gated safety systems", icon: "FiShield" },
+      { text: "Premium common areas", icon: "FiLayers" },
+      { text: "Rainwater harvesting slots", icon: "FiCompass" },
+      { text: "High resale appreciation", icon: "FiTrendingUp" }
+    ],
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop"
   }
 ];
 
@@ -139,6 +163,54 @@ const landServices = [
       { text: "Strategic land banking", icon: "FiTrendingUp" }
     ],
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    num: "04",
+    title: "Open Lands",
+    description: "Raw acreage and strategic bulk land parcels with clear titles, boundary walls, and direct highway connectivity, perfect for long-term investments or future community planning.",
+    bullets: [
+      { text: "Clear title & registration", icon: "FiCheckCircle" },
+      { text: "Secure boundary walls", icon: "FiShield" },
+      { text: "Strategic road access", icon: "FiMapPin" },
+      { text: "Bulk land banking ROI", icon: "FiTrendingUp" }
+    ],
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop"
+  },
+  {
+    num: "05",
+    title: "Open Plots",
+    description: "Gated layout open plots with HMDA & DTCP approvals, underground drainage, electricity cables, community parks, and standard civic amenities ready for villa construction.",
+    bullets: [
+      { text: "HMDA & DTCP approved", icon: "FiCheckCircle" },
+      { text: "Underground civic conduits", icon: "FiGrid" },
+      { text: "BT Blacktop internal roads", icon: "FiMapPin" },
+      { text: "Immediate villa building suit", icon: "FiHome" }
+    ],
+    image: "https://imgs.search.brave.com/oSE3F7TP979oRx7XqamKmg0kV1Xa_XKUDO9_Nnc8cK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlc3RpZ2Vzb3V0/aGVybnN0YXIuaW5m/by9pbWFnZXMvcHJl/c3RpZ2UvcHJlc3Rp/Z2UtdGVjaC12aXN0/YS53ZWJw"
+  },
+  {
+    num: "06",
+    title: "Agricultural Lands",
+    description: "Suburban farm lands and managed agricultural layout plots with fertile soil, active water source setups, and secure fencing, offering an organic lifestyle or land banking value.",
+    bullets: [
+      { text: "Suburban farmhouse layouts", icon: "FiCompass" },
+      { text: "Clear water source access", icon: "FiGrid" },
+      { text: "Secure wire fencing lines", icon: "FiShield" },
+      { text: "Natural eco environments", icon: "FiHome" }
+    ],
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    num: "07",
+    title: "Commercial Lands",
+    description: "High-potential commercial-zoned land parcels situated along busy highway corridors and junction lines, optimized for warehouses, showrooms, or retail parks.",
+    bullets: [
+      { text: "Commercial-zoned plots", icon: "FiBriefcase" },
+      { text: "Highway corridor facing", icon: "FiMapPin" },
+      { text: "High utility connectivity", icon: "FiLayers" },
+      { text: "Rapid commercial growth", icon: "FiTrendingUp" }
+    ],
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
   }
 ];
 

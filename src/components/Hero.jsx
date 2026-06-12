@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const slides = [
   {
@@ -114,12 +115,15 @@ export default function Hero() {
 
           {/* Action Row */}
           <div className="flex flex-wrap gap-4 items-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm"
+            <a
+              href="https://wa.me/919948100096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm inline-flex items-center gap-2"
             >
-              Book Consultation
-            </Link>
+              <FaWhatsapp size={14} />
+              <span>WhatsApp Us</span>
+            </a>
             <Link
               to="/projects"
               className="px-8 py-4 border border-white/40 hover:border-white text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:bg-white/5"

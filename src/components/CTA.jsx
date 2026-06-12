@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function CTA() {
   return (
@@ -38,21 +38,12 @@ export default function CTA() {
           {/* Buttons row */}
           <div className="mt-10 flex flex-col sm:flex-row gap-5 items-center justify-center w-full">
             
-            {/* Call Now button */}
-            <a
-              href="tel:+919948100096"
-              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-ak-gold hover:bg-ak-gold-light text-ak-navy font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 shadow-ak-sm hover:shadow-ak-md w-full sm:w-auto text-center"
-            >
-              <FaPhoneAlt size={12} />
-              <span>Call Now</span>
-            </a>
-
             {/* WhatsApp button */}
             <a
               href="https://wa.me/919948100096"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/20 hover:border-ak-gold text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center shadow-md"
             >
               <FaWhatsapp size={14} />
               <span>WhatsApp Us</span>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPhoneAlt, FaWhatsapp, FaChevronUp } from "react-icons/fa";
+import { FaWhatsapp, FaChevronUp } from "react-icons/fa";
 
 export default function FloatingActions() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -44,41 +43,18 @@ export default function FloatingActions() {
         )}
       </AnimatePresence>
 
-      {/* Floating Sticky Pulse Consultation Button - square corners, gold bg */}
-      <Link
-        to="/contact"
-        className="sticky-pulse-cta bg-ak-gold text-ak-navy-deep px-6 py-3.5 text-[11px] font-sans font-bold tracking-widest uppercase rounded-none shadow-lg border border-white/10 hover:bg-ak-gold-light transition-all duration-300 block text-center"
-      >
-        Book Consultation
-      </Link>
-
-      {/* Floating Call Button - Navy styled, gold hover */}
-      <motion.a
-        href="tel:+919948100096"
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-none bg-ak-navy text-white flex items-center justify-center shadow-lg relative group border border-white/10"
-        aria-label="Call business support desk"
-      >
-        <span className="absolute inset-0 rounded-none bg-ak-gold/30 animate-ping opacity-75" />
-        <FaPhoneAlt size={14} className="relative z-10 group-hover:text-ak-gold transition-colors" />
-        <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-none opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
-          Call Desk
-        </span>
-      </motion.a>
-
-      {/* Floating WhatsApp Button - Navy/White styled */}
+      {/* Floating WhatsApp Button - Green styled */}
       <motion.a
         href="https://wa.me/919948100096"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-none bg-ak-navy text-white flex items-center justify-center shadow-lg relative group border border-white/10"
+        className="w-12 h-12 rounded-none bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-lg relative group border border-white/10"
         aria-label="Chat via WhatsApp"
       >
-        <span className="absolute inset-0 rounded-none bg-ak-gold/30 animate-ping opacity-75" />
-        <FaWhatsapp size={16} className="relative z-10 group-hover:text-ak-gold transition-colors" />
+        <span className="absolute inset-0 rounded-none bg-[#25D366]/40 animate-ping opacity-75" />
+        <FaWhatsapp size={18} className="relative z-10 text-white transition-colors" />
         <span className="absolute right-14 bg-slate-900 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-none opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-md whitespace-nowrap">
           WhatsApp
         </span>
