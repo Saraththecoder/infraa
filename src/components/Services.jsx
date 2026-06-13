@@ -40,6 +40,13 @@ const iconMap = {
 };
 
 const categories = [
+  {
+    id: "constructions",
+    name: "Constructions",
+    eyebrow: "[ Turnkey Solutions ]",
+    headline: "End-to-End Construction Services",
+    description: "End-to-end turnkey construction solutions for residential, commercial, and industrial projects with a focus on quality, safety, and timely delivery."
+  },
   { 
     id: "real-estate", 
     name: "Real Estate", 
@@ -53,13 +60,6 @@ const categories = [
     eyebrow: "[ Plotted Gated Communities ]", 
     headline: "HMDA & DTCP Approved Plotted Developments", 
     description: "Discover legally verified open plots, premium gated layout investments, and suburban farm lands with high future valuation." 
-  },
-  {
-    id: "constructions",
-    name: "Constructions",
-    eyebrow: "[ Turnkey Solutions ]",
-    headline: "End-to-End Construction Services",
-    description: "End-to-end turnkey construction solutions for residential, commercial, and industrial projects with a focus on quality, safety, and timely delivery."
   }
 ];
 
@@ -228,7 +228,7 @@ const landServices = [
 export default function Services() {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(() => {
-    return location.state?.tab === "lands" ? "lands" : "real-estate";
+    return location.state?.tab ? location.state.tab : "constructions";
   });
 
   useEffect(() => {
