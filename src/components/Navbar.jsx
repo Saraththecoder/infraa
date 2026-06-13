@@ -69,7 +69,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links - Center aligned */}
-          <nav className="hidden xl:flex items-center gap-5 shrink-1">
+          <nav className="hidden xl:flex items-center gap-5 shrink-1 mt-2">
             {navLinks.map((link) => {
               if (link.dropdown) {
                 const isActiveGroup = location.pathname.startsWith(link.href);
