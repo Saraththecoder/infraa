@@ -174,7 +174,7 @@ const landServices = [
       { text: "Verified documentation", icon: "FiFileText" },
       { text: "High ROI potential", icon: "FiTrendingUp" }
     ],
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781255573/ankur_ex65ul.webp"
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781365617/72986f_979504d85df7426b9d75cb6c1818d1ac_mv2_tabswv.webp"
   },
   {
     num: "02",

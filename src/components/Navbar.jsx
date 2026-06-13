@@ -6,9 +6,15 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Real Estate", href: "/services", state: { tab: "real-estate" } },
-  { name: "Lands", href: "/services", state: { tab: "lands" } },
-  { name: "Constructions", href: "/services", state: { tab: "constructions" } },
+  { 
+    name: "Services", 
+    href: "/services", 
+    dropdown: [
+      { name: "Constructions", href: "/services", state: { tab: "constructions" } },
+      { name: "Real Estate", href: "/services", state: { tab: "real-estate" } },
+      { name: "Lands", href: "/services", state: { tab: "lands" } },
+    ]
+  },
   { name: "Interior Solutions", href: "/solutions" },
   { name: "Projects", href: "/projects" },
   { name: "Careers", href: "/careers" },
@@ -65,18 +71,43 @@ export default function Navbar() {
           {/* Desktop Links - Center aligned */}
           <nav className="hidden xl:flex items-center gap-5 shrink-1">
             {navLinks.map((link) => {
-              const isActive =
-                location.pathname === link.href &&
-                (link.href !== "/services" ||
-                  (link.state?.tab === "lands"
-                    ? location.state?.tab === "lands"
-                    : location.state?.tab !== "lands"));
+              if (link.dropdown) {
+                const isActiveGroup = location.pathname.startsWith(link.href);
+                return (
+                  <div key={link.name} className="relative group py-2">
+                    <Link
+                      to={link.href}
+                      className={`nav-link-custom text-[13px] whitespace-nowrap flex items-center gap-1.5 ${
+                        isActiveGroup ? "active-link" : ""
+                      }`}
+                    >
+                      {link.name}
+                      <svg className="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </Link>
+                    <div className="absolute top-[100%] left-0 w-52 bg-white shadow-ak-md border-t-2 border-ak-gold opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col z-50">
+                      {link.dropdown.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          to={subLink.href}
+                          state={subLink.state}
+                          className="px-5 py-3.5 text-[12px] font-sans font-bold uppercase tracking-wider text-ak-navy hover:text-ak-gold hover:bg-ak-offwhite transition-colors border-b border-ak-border last:border-b-0 text-left"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              const isActive = location.pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  state={link.state}
-                  className={`nav-link-custom text-[13px] whitespace-nowrap ${isActive ? "active-link" : ""}`}
+                  className={`nav-link-custom text-[13px] whitespace-nowrap py-2 ${isActive ? "active-link" : ""}`}
                 >
                   {link.name}
                 </Link>
@@ -153,19 +184,45 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <nav className="flex-1 overflow-y-auto px-6 py-10 flex flex-col gap-10 text-left">
+              <nav className="flex-1 overflow-y-auto px-6 py-10 flex flex-col gap-6 text-left">
                 {navLinks.map((link) => {
-                  const isActive =
-                    location.pathname === link.href &&
-                    (link.href !== "/services" ||
-                      (link.state?.tab === "lands"
-                        ? location.state?.tab === "lands"
-                        : location.state?.tab !== "lands"));
+                  if (link.dropdown) {
+                    const isActiveGroup = location.pathname.startsWith(link.href);
+                    return (
+                      <div key={link.name} className="flex flex-col gap-4">
+                        <Link
+                          to={link.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`text-[15px] font-semibold tracking-wider uppercase font-serif py-1 transition-colors ${
+                            isActiveGroup
+                              ? "text-ak-gold border-l-2 border-ak-gold pl-3"
+                              : "text-white/70 hover:text-white pl-3 border-l-2 border-transparent"
+                          }`}
+                        >
+                          {link.name}
+                        </Link>
+                        <div className="flex flex-col gap-3 pl-6 border-l border-white/10 ml-3">
+                          {link.dropdown.map((subLink) => (
+                            <Link
+                              key={subLink.name}
+                              to={subLink.href}
+                              state={subLink.state}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="text-[12px] font-sans font-medium uppercase tracking-wider text-white/50 hover:text-white transition-colors py-1"
+                            >
+                              - {subLink.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  const isActive = location.pathname === link.href;
                   return (
                     <Link
                       key={link.name}
                       to={link.href}
-                      state={link.state}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`text-[15px] font-semibold tracking-wider uppercase font-serif py-1 transition-colors ${
                         isActive
