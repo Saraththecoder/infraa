@@ -53,6 +53,13 @@ const categories = [
     eyebrow: "[ Plotted Gated Communities ]", 
     headline: "HMDA & DTCP Approved Plotted Developments", 
     description: "Discover legally verified open plots, premium gated layout investments, and suburban farm lands with high future valuation." 
+  },
+  {
+    id: "constructions",
+    name: "Constructions",
+    eyebrow: "[ Turnkey Solutions ]",
+    headline: "End-to-End Construction Services",
+    description: "End-to-end turnkey construction solutions for residential, commercial, and industrial projects with a focus on quality, safety, and timely delivery."
   }
 ];
 
@@ -102,6 +109,57 @@ const realEstateServices = [
       { text: "Portfolio consulting", icon: "FiUsers" }
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+  }
+];
+
+const constructionServices = [
+  {
+    num: "01",
+    title: "Residential Constructions",
+    description: "Premium villas, duplexes, and custom independent homes built with high-quality materials, sustainable practices, and modern architectural design.",
+    bullets: [
+      { text: "Custom Villas", icon: "FiHome" },
+      { text: "High-grade materials", icon: "FiShield" },
+      { text: "Vastu compliant", icon: "FiCompass" },
+      { text: "Smart home ready", icon: "FiLayers" }
+    ],
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781364462/photo-1621511075938-f03482369feb_vgfvr1.webp"
+  },
+  {
+    num: "02",
+    title: "Commercial & Retail Complexes",
+    description: "Sleek, modern commercial buildings, shopping arcades, and corporate office spaces designed for high traffic, utility, and visual impact.",
+    bullets: [
+      { text: "Corporate offices", icon: "FiBriefcase" },
+      { text: "Retail arcades", icon: "FiMapPin" },
+      { text: "Structured layouts", icon: "FiGrid" },
+      { text: "Timely delivery", icon: "FiCheckCircle" }
+    ],
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781364852/1495788fc5e2ad0d7a1a0a90451c2616_rxavbt.webp"
+  },
+  {
+    num: "03",
+    title: "Industrial Warehousing",
+    description: "Heavy-duty industrial sheds, factory structures, and spacious logistics warehouses built for extreme load-bearing and operational efficiency.",
+    bullets: [
+      { text: "Logistics facilities", icon: "FiLayers" },
+      { text: "Heavy-duty built", icon: "FiShield" },
+      { text: "Optimized space", icon: "FiMaximize" },
+      { text: "Code compliant", icon: "FiCheckCircle" }
+    ],
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781364884/Industrial-Warehousing_gkxgt6.webp"
+  },
+  {
+    num: "04",
+    title: "Turnkey Contracting",
+    description: "End-to-end turnkey construction solutions handling everything from architectural blueprints and municipal approvals to final handover.",
+    bullets: [
+      { text: "End-to-end management", icon: "FiAward" },
+      { text: "Cost efficiency", icon: "FiDollarSign" },
+      { text: "Expert engineering", icon: "FiUsers" },
+      { text: "Strict quality control", icon: "FiShield" }
+    ],
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781364912/Labour_Contracting-1_kretix.webp"
   }
 ];
 
@@ -179,7 +237,7 @@ export default function Services() {
     }
   }, [location.state]);
 
-  const currentServices = activeTab === "real-estate" ? realEstateServices : landServices;
+  const currentServices = activeTab === "real-estate" ? realEstateServices : activeTab === "constructions" ? constructionServices : landServices;
   const currentCat = categories.find((c) => c.id === activeTab) || categories[0];
 
   return (
@@ -298,7 +356,16 @@ export default function Services() {
                     className="flex items-center justify-center gap-2 py-2 px-3 bg-ak-navy hover:bg-ak-gold text-white hover:text-ak-navy-deep font-sans text-[11px] font-bold tracking-wider uppercase transition-all duration-300 text-center shadow-sm"
                   >
                     <FaPhone size={11} className="shrink-0" />
-                    <span>Call</span>
+                    <span>Call 1</span>
+                  </a>
+
+                  {/* Additional Call button */}
+                  <a
+                    href="tel:+919014529890"
+                    className="flex items-center justify-center gap-2 py-2 px-3 bg-ak-navy hover:bg-ak-gold text-white hover:text-ak-navy-deep font-sans text-[11px] font-bold tracking-wider uppercase transition-all duration-300 text-center shadow-sm col-span-2"
+                  >
+                    <FaPhone size={11} className="shrink-0" />
+                    <span>Call 2</span>
                   </a>
                 </div>
               </div>

@@ -8,8 +8,10 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Real Estate", href: "/services", state: { tab: "real-estate" } },
   { name: "Lands", href: "/services", state: { tab: "lands" } },
+  { name: "Constructions", href: "/services", state: { tab: "constructions" } },
   { name: "Interior Solutions", href: "/solutions" },
   { name: "Projects", href: "/projects" },
+  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -36,8 +38,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[rgba(11,26,48,0.9)] backdrop-blur-[16px] py-4 border-b border-white/8 shadow-ak-sm"
-            : "bg-transparent py-6"
+            ? "bg-white shadow-ak-sm py-4 border-b border-ak-border"
+            : "bg-white py-6 shadow-sm"
         }`}
       >
         <div className="container-custom flex items-center justify-between">
@@ -45,15 +47,15 @@ export default function Navbar() {
           {/* Logo - logo.png + Text */}
           <Link
             to="/"
-            className="flex items-center gap-3 group text-left"
+            className="flex items-center gap-2 lg:gap-3 group text-left shrink-0"
           >
-            <img src="/logo.png" alt="AK Group Logo" className="h-8 w-auto object-contain" />
-            <div className="flex items-center gap-2.5">
-              <span className="font-serif text-[24px] font-bold text-white leading-none">
+            <img src="/logo.png" alt="AK Group Logo" className="h-10 md:h-12 lg:h-14 w-auto object-contain" />
+            <div className="flex items-center gap-2">
+              <span className="font-serif text-[24px] lg:text-[28px] font-bold text-ak-navy leading-none">
                 AK
               </span>
-              <div className="w-[1px] h-5 bg-[#D97706]" />
-              <div className="flex flex-col text-[11px] font-sans font-medium uppercase tracking-[0.05em] text-[#D97706] leading-none">
+              <div className="w-[1px] h-5 lg:h-6 bg-[#D97706]" />
+              <div className="flex flex-col text-[10px] lg:text-[12px] font-sans font-bold uppercase tracking-[0.05em] text-[#D97706] leading-none">
                 <span>GROUP</span>
                 <span className="mt-0.5">INFRA</span>
               </div>
@@ -61,7 +63,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links - Center aligned */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden xl:flex items-center gap-5 shrink-1">
             {navLinks.map((link) => {
               const isActive =
                 location.pathname === link.href &&
@@ -74,7 +76,7 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   state={link.state}
-                  className={`nav-link-custom ${isActive ? "active-link" : ""}`}
+                  className={`nav-link-custom text-[13px] whitespace-nowrap ${isActive ? "active-link" : ""}`}
                 >
                   {link.name}
                 </Link>
@@ -82,17 +84,11 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Phone + CTA - Right aligned */}
-          <div className="hidden lg:flex items-center gap-6">
-            <a
-              href="tel:+919948100096"
-              className="font-sans text-[13px] font-normal text-white hover:text-ak-gold transition-colors duration-200"
-            >
-              +91 99481 00096
-            </a>
+          {/* CTA - Right aligned */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 shrink-0">
             <Link
               to="/contact"
-              className="px-6 py-2.5 bg-ak-gold hover:bg-ak-gold-light text-ak-navy-deep text-[13px] font-medium tracking-[0.08em] uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md font-sans"
+              className="px-4 xl:px-6 py-2 xl:py-2.5 bg-ak-gold hover:bg-ak-gold-light text-white text-[11px] xl:text-[12px] font-bold tracking-[0.08em] uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md font-sans whitespace-nowrap"
             >
               Enquire Now
             </Link>
@@ -102,10 +98,10 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded text-white hover:bg-white/5 transition-colors"
+              className="p-2 rounded text-ak-navy hover:bg-ak-navy/5 transition-colors"
               aria-label="Open menu"
             >
-              <HiOutlineMenuAlt3 size={24} />
+              <HiOutlineMenuAlt3 size={28} />
             </button>
           </div>
         </div>

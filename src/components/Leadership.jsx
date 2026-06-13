@@ -7,7 +7,7 @@ const founders = [
     name: "V Ashwin Kumar",
     role: "Director",
     image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266630/37ea1e7e-5f10-422f-a993-7deea36a48e0_t4x6bl.jpg",
-    bio: "Under Ashwin's strategic leadership, AK Group has acquired and developed high-value land parcels across Andhra Pradesh. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
+    bio: "Hailing from Hyderabad with 10 years of experience, Ashwin has strategically led AK Group to acquire and develop high-value land parcels across Andhra Pradesh and Telangana. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
     specialties: ["Land Acquisition", "Legal & Regulatory Compliance", "Corporate Strategy"],
     email: "ashwin@akgroupinfra.com"
   },
@@ -15,7 +15,7 @@ const founders = [
     name: "K Kiran Kumar",
     role: "Director",
     image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266645/987c2816-f181-401b-8f56-505a78e2b6ac_icgp7w.jpg",
-    bio: "Kiran oversees project execution, site development infrastructure, and investor partnerships. His customer-first approach ensures that every residential plotted layout meets elite municipal design guidelines and creates high investment yields.",
+    bio: "Based in Hyderabad with 12 years of experience, Kiran oversees project execution, site development infrastructure, and investor partnerships. His customer-first approach ensures that every residential plotted layout meets elite municipal design guidelines and creates high investment yields.",
     specialties: ["Infrastructure Development", "Investor Partnerships", "Operations & Quality Control"],
     email: "kiran@akgroupinfra.com"
   }

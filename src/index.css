@@ -147,13 +147,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #0b1a30 !important;
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link-custom:hover, .nav-link-custom.active-link {
-  color: rgba(255, 255, 255, 1) !important;
+  color: #F97316 !important;
 }
 .nav-link-custom::after {
   content: '';

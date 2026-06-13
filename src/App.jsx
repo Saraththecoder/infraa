@@ -12,6 +12,7 @@ import ServicesPage from "./pages/ServicesPage";
 import SolutionsPage from "./pages/SolutionsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import CareersPage from "./pages/CareersPage";
 
 // Scroll restoration to top on route change
 function ScrollToTop() {
@@ -44,6 +45,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/careers" element={<CareersPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

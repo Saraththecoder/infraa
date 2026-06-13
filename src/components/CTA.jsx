@@ -55,7 +55,16 @@ export default function CTA() {
               className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/40 hover:border-white text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
             >
               <FaPhone size={12} />
-              <span>Call Us</span>
+              <span>Call 1</span>
+            </a>
+
+            {/* Additional Call button */}
+            <a
+              href="tel:+919014529890"
+              className="flex items-center justify-center gap-3 px-8 py-3.5 border border-white/40 hover:border-white text-white font-sans text-xs font-bold tracking-widest uppercase rounded-none transition-all duration-300 w-full sm:w-auto text-center hover:bg-white/5"
+            >
+              <FaPhone size={12} />
+              <span>Call 2</span>
             </a>
 
           </div>

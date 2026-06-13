@@ -81,9 +81,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-[11px] font-bold font-sans text-ak-muted uppercase tracking-wider">Phone Call</h4>
-                  <p className="text-sm font-semibold text-ak-slate font-sans mt-1.5">
-                    <a href="tel:+919948100096" className="hover:text-ak-gold transition-colors duration-200">+91 99481 00096</a>
-                  </p>
+                  <div className="flex flex-col gap-1 mt-1.5">
+                    <a href="tel:+919948100096" className="text-sm font-semibold text-ak-slate font-sans hover:text-ak-gold transition-colors duration-200">+91 99481 00096</a>
+                    <a href="tel:+919014529890" className="text-sm font-semibold text-ak-slate font-sans hover:text-ak-gold transition-colors duration-200">+91 90145 29890</a>
+                  </div>
                 </div>
               </div>
 
