@@ -201,6 +201,11 @@ export default function Contact() {
                     <option value="Modular Kitchen">Modular Kitchen</option>
                     <option value="Custom Wardrobes">Custom Wardrobes</option>
                     <option value="Turnkey Renovations">Turnkey Renovations</option>
+                    <option value="Open Plots">Open Plots</option>
+                    <option value="Villas">Villas</option>
+                    <option value="Apartments">Apartments</option>
+                    <option value="Agriculture Lands">Agriculture Lands</option>
+                    <option value="Farm Houses">Farm Houses</option>
                     <option value="Others">Others</option>
                   </select>
                 </div>

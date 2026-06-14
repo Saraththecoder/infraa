@@ -58,7 +58,7 @@ export default function About() {
             
             {/* Heading */}
             <h2 className="text-heading text-ak-navy font-serif font-bold mt-4 leading-[1.25]">
-              Grounded in Andhra Pradesh. Built for Generations.
+              Grounded in Telangana. Built for Generations.
             </h2>
 
             {/* Paragraphs */}
@@ -67,7 +67,7 @@ export default function About() {
                 ASHWIN AND KIRAN INFRA DEVELOPERS PVT. LTD. (AK Group) is a premier real estate development and turnkey interiors firm committed to raising the benchmark of plotted layouts, residential infrastructure, and custom living spaces.
               </p>
               <p>
-                We execute developments across Andhra Pradesh's high-growth corridors. Every venture is subjected to rigorous legal vetting and is designed to create substantial investment value, which is then seamlessly completed with our premium bespoke interior solutions division.
+                We execute developments across Telangana's high-growth corridors. Every venture is subjected to rigorous legal vetting and is designed to create substantial investment value, which is then seamlessly completed with our premium bespoke interior solutions division.
               </p>
             </div>
 

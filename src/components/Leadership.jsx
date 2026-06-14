@@ -6,8 +6,8 @@ const founders = [
   {
     name: "V Ashwin Kumar",
     role: "Director",
-    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266630/37ea1e7e-5f10-422f-a993-7deea36a48e0_t4x6bl.jpg",
-    bio: "Hailing from Hyderabad with 10 years of experience, Ashwin has strategically led AK Group to acquire and develop high-value land parcels across Andhra Pradesh and Telangana. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
+    image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781414099/c5d1059c-5b64-4c5b-aa60-464d99e71db6_bw7dyy.jpg",
+    bio: "Hailing from Hyderabad with 10 years of experience, Ashwin has strategically led AK Group to acquire and develop high-value land parcels across Telangana. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
     specialties: ["Land Acquisition", "Legal & Regulatory Compliance", "Corporate Strategy"],
     email: "ashwin@akgroupinfra.com"
   },
@@ -39,7 +39,7 @@ export default function Leadership() {
           </h2>
           
           <p className="mt-4 text-ak-muted font-sans text-body-custom max-w-xl">
-            Ashwin and Kiran lead the firm with a shared vision of raising the standard of plotted infrastructure in Andhra Pradesh, backed by transparency and corporate excellence.
+            Ashwin and Kiran lead the firm with a shared vision of raising the standard of plotted infrastructure in Telangana, backed by transparency and corporate excellence.
           </p>
         </div>
 

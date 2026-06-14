@@ -117,6 +117,10 @@ export default function Navbar() {
 
           {/* CTA - Right aligned */}
           <div className="hidden lg:flex items-center gap-3 xl:gap-5 shrink-0">
+            <div className="hidden md:flex flex-col text-right text-ak-navy font-sans text-[12px] font-bold mr-2">
+               <a href="tel:+919948100096" className="hover:text-ak-gold transition-colors">+91 99481 00096</a>
+               <a href="tel:+919014529890" className="hover:text-ak-gold transition-colors">+91 90145 29890</a>
+            </div>
             <Link
               to="/contact"
               className="px-4 xl:px-6 py-2 xl:py-2.5 bg-ak-gold hover:bg-ak-gold-light text-white text-[11px] xl:text-[12px] font-bold tracking-[0.08em] uppercase rounded-[2px] transition-all duration-300 shadow-ak-sm hover:shadow-ak-md font-sans whitespace-nowrap"
@@ -237,6 +241,10 @@ export default function Navbar() {
               </nav>
 
               <div className="p-6 border-t border-white/8 bg-ak-navy flex flex-col gap-4">
+                <div className="flex flex-col items-center gap-2 text-white font-sans text-sm font-semibold tracking-wide">
+                  <a href="tel:+919948100096" className="hover:text-ak-gold transition-colors">+91 99481 00096</a>
+                  <a href="tel:+919014529890" className="hover:text-ak-gold transition-colors">+91 90145 29890</a>
+                </div>
                 <Link
                   to="/contact"
                   onClick={() => setMobileMenuOpen(false)}
