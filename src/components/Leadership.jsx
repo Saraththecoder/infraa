@@ -8,16 +8,14 @@ const founders = [
     role: "Director",
     image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781414099/c5d1059c-5b64-4c5b-aa60-464d99e71db6_bw7dyy.jpg",
     bio: "Hailing from Hyderabad with 10 years of experience, Ashwin has strategically led AK Group to acquire and develop high-value land parcels across Telangana. He is dedicated to absolute legal integrity, clean-title compliance, and establishing long-term trust with landowners and developers.",
-    specialties: ["Land Acquisition", "Legal & Regulatory Compliance", "Corporate Strategy"],
-    email: "ashwin@akgroupinfra.com"
+    specialties: ["Land Acquisition", "Legal & Regulatory Compliance", "Corporate Strategy"]
   },
   {
     name: "K Kiran Kumar",
     role: "Director",
     image: "https://res.cloudinary.com/doegh5lpl/image/upload/v1781266645/987c2816-f181-401b-8f56-505a78e2b6ac_icgp7w.jpg",
     bio: "Based in Hyderabad with 12 years of experience, Kiran oversees project execution, site development infrastructure, and investor partnerships. His customer-first approach ensures that every residential plotted layout meets elite municipal design guidelines and creates high investment yields.",
-    specialties: ["Infrastructure Development", "Investor Partnerships", "Operations & Quality Control"],
-    email: "kiran@akgroupinfra.com"
+    specialties: ["Infrastructure Development", "Investor Partnerships", "Operations & Quality Control"]
   }
 ];
 
@@ -100,16 +98,6 @@ export default function Leadership() {
                   </div>
                 </div>
 
-                {/* Founder Contact / Social Links */}
-                <div className="flex gap-4 mt-6 pt-4 border-t border-ak-border items-center">
-                  <a
-                    href={`mailto:${founder.email}`}
-                    className="flex items-center gap-2 text-[12px] font-sans font-medium text-ak-muted hover:text-ak-navy transition-colors duration-200"
-                  >
-                    <FaEnvelope className="text-ak-gold" />
-                    <span>{founder.email}</span>
-                  </a>
-                </div>
               </div>
             </motion.div>
           ))}
