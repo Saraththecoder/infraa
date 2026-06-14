@@ -167,15 +167,7 @@ export default function Footer() {
             >
               <FaTwitter size={14} />
             </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/40 hover:text-white text-base transition-colors duration-200"
-              aria-label="LinkedIn Link"
-            >
-              <FaLinkedinIn size={14} />
-            </a>
+
             <a
               href="https://www.instagram.com/akgroupinfra?igsh=aXNqZnVhcGNxaDBl"
               target="_blank"
