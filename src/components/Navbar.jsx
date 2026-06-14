@@ -56,14 +56,20 @@ export default function Navbar() {
             className="flex items-center gap-2 lg:gap-3 group text-left shrink-0"
           >
             <img src="/logo.png" alt="AK Group Logo" className="h-10 md:h-12 lg:h-14 w-auto object-contain" />
-            <div className="flex items-center gap-2">
-              <span className="font-serif text-[24px] lg:text-[28px] font-bold text-ak-navy leading-none">
-                AK
-              </span>
-              <div className="w-[1px] h-5 lg:h-6 bg-[#D97706]" />
-              <div className="flex flex-col text-[10px] lg:text-[12px] font-sans font-bold uppercase tracking-[0.05em] text-[#D97706] leading-none">
-                <span>GROUP</span>
-                <span className="mt-0.5">INFRA</span>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-[24px] lg:text-[28px] font-bold text-ak-navy leading-none">
+                  AK
+                </span>
+                <div className="w-[1px] h-5 lg:h-6 bg-[#D97706]" />
+                <div className="flex flex-col text-[10px] lg:text-[12px] font-sans font-bold uppercase tracking-[0.05em] text-[#D97706] leading-none">
+                  <span>GROUP</span>
+                  <span className="mt-0.5">INFRA</span>
+                </div>
+              </div>
+              <div className="text-[9px] font-sans font-semibold text-ak-slate tracking-widest leading-tight">
+                CIN : U68200TS2025PTC208590<br />
+                GST : 36ABECA4605M1ZL
               </div>
             </div>
           </Link>
@@ -168,14 +174,20 @@ export default function Navbar() {
                   className="flex items-center gap-2.5 text-left"
                 >
                   <img src="/logo.png" alt="AK Group Logo" className="h-7 w-auto object-contain" />
-                  <div className="flex items-center gap-2">
-                    <span className="font-serif text-[20px] font-bold text-white leading-none">
-                      AK
-                    </span>
-                    <div className="w-[1px] h-4 bg-[#D97706]" />
-                    <div className="flex flex-col text-[9px] font-sans font-medium uppercase tracking-[0.05em] text-[#D97706] leading-none">
-                      <span>GROUP</span>
-                      <span className="mt-0.5">INFRA</span>
+                  <div className="flex flex-col gap-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="font-serif text-[20px] font-bold text-white leading-none">
+                        AK
+                      </span>
+                      <div className="w-[1px] h-4 bg-[#D97706]" />
+                      <div className="flex flex-col text-[9px] font-sans font-medium uppercase tracking-[0.05em] text-[#D97706] leading-none">
+                        <span>GROUP</span>
+                        <span className="mt-0.5">INFRA</span>
+                      </div>
+                    </div>
+                    <div className="text-[8px] font-sans font-medium text-white/70 tracking-widest leading-tight">
+                      CIN : U68200TS2025PTC208590<br />
+                      GST : 36ABECA4605M1ZL
                     </div>
                   </div>
                 </Link>

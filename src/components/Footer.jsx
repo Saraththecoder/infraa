@@ -47,6 +47,11 @@ export default function Footer() {
             </div>
           </Link>
 
+          <div className="text-[11px] font-sans font-medium text-white/70 tracking-widest leading-relaxed">
+            <div>CIN : U68200TS2025PTC208590</div>
+            <div>GST : 36ABECA4605M1ZL</div>
+          </div>
+
           <p className="text-[13px] text-white/50 leading-relaxed max-w-sm">
             ASHWIN AND KIRAN INFRA DEVELOPERS PVT. LTD. (AK Group) is a trusted real estate and infrastructure development company committed to legal transparency and sustainable investment growth.
           </p>
