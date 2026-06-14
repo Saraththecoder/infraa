@@ -150,7 +150,7 @@ export default function Footer() {
           {/* Social Media Link Icons */}
           <div className="flex gap-4">
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/share/1HGWcAqkqF/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white text-base transition-colors duration-200"
@@ -159,7 +159,7 @@ export default function Footer() {
               <FaFacebookF size={14} />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/AKGROUP434811"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white text-base transition-colors duration-200"
@@ -177,7 +177,7 @@ export default function Footer() {
               <FaLinkedinIn size={14} />
             </a>
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/akgroupinfra?igsh=aXNqZnVhcGNxaDBl"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white text-base transition-colors duration-200"
