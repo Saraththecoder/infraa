@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import PageBanner from "../components/PageBanner";
@@ -92,6 +93,12 @@ export default function CareersPage() {
 
   return (
     <>
+      <SEO 
+        title="Careers at AK Group | Real Estate Jobs in Hyderabad"
+        description="Join AK Group, a leading real estate and interior design firm in Hyderabad. View our current job openings for engineers, designers, and managers."
+        keywords="Real estate jobs Hyderabad, civil engineering jobs Andhra Pradesh, interior designer jobs Hyderabad, AK Group careers, hiring real estate professionals"
+        url="/careers"
+      />
       <PageBanner
         title="Careers at AK Group"
         subtitle="Build Your Future With Us"

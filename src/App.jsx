@@ -4,6 +4,7 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
+import { HelmetProvider } from 'react-helmet-async';
 
 // Pages
 import Home from "./pages/Home";
@@ -28,35 +29,37 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="relative min-h-screen w-full bg-white text-slate-800 antialiased font-sans selection:bg-primary/20 selection:text-primary">
-        {/* Premium Loader Trigger */}
-        <Loader />
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="relative min-h-screen w-full bg-white text-slate-800 antialiased font-sans selection:bg-primary/20 selection:text-primary">
+          {/* Premium Loader Trigger */}
+          <Loader />
 
-        {/* Sticky Glassmorphic Navigation */}
-        <Navbar />
+          {/* Sticky Glassmorphic Navigation */}
+          <Navbar />
 
-        {/* Main Routed Sections */}
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/solutions" element={<SolutionsPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
+          {/* Main Routed Sections */}
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
 
-        {/* Corporate structured Footer */}
-        <Footer />
+          {/* Corporate structured Footer */}
+          <Footer />
 
-        {/* Floating Hotkeys (WhatsApp, Call, BackToTop) */}
-        <FloatingActions />
-      </div>
-    </Router>
+          {/* Floating Hotkeys (WhatsApp, Call, BackToTop) */}
+          <FloatingActions />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
