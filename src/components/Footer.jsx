@@ -159,7 +159,7 @@ export default function Footer() {
               <FaFacebookF size={14} />
             </a>
             <a
-              href="https://x.com/AKGROUP434811"
+              href="https://x.com/AKGroupInfra"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white text-base transition-colors duration-200"
